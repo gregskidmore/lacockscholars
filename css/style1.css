@@ -1,0 +1,1344 @@
+#mc_embed_signup{
+	background:#fff;
+	clear:left;
+	font:14px 'Quattrocento',Times,serif;
+	color:black;
+	width:80%;
+	max-width: 500px;
+	margin:15px auto;
+	box-shadow:5px 5px 10px #404040;
+	padding-right:10px;
+}
+
+#social-wrapper {
+	display:block;
+	width:50%;
+	margin:20px auto;
+	color:black;
+  line-height:1.2em;
+}
+
+#email {
+	margin:15px auto;
+	color:black;
+	font-size:0.9em;
+	line-height:1.2em;
+}
+
+#background {
+	position:absolute;
+  top:0px;
+	left:0px;
+  width:100%;
+	opacity:0;
+}
+
+#about-content {
+	color:black;
+	padding-bottom:2em;
+}
+
+#about-content-wrapper{
+	margin:auto 10%;
+	line-height:1.5em;
+	font-size:1em;
+}
+
+#listen-wrapper {
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:15px;
+	text-align:center;
+/* 	border:thin blue solid; */
+}
+
+#logo {
+	display:block;
+	box-shadow:3px 3px 8px #404040;
+	margin:30px auto;
+	width:70%;
+	max-width:215px;
+}
+
+.cdheader {
+	display:block;
+	box-shadow:3px 3px 8px #404040;
+	margin:30px auto;
+	width:95%;
+	max-width:368px;
+}
+
+.cd-order-form {
+	margin:20px;
+	line-height:1.5em;
+	margin-bottom:20px !important;
+}
+
+.cd-order-form-title {
+	font-weight:bold;
+	font-size:1.5em;
+	margin:30px !important;
+  line-height:1.2em;
+}
+
+#gregimg {
+	float:left;
+	display:block;
+	box-shadow:3px 3px 8px #404040;
+	width:40%;
+	height:auto;
+	margin:0 20px 20px 0;
+	max-height:300px;
+	max-width:300px;
+}
+
+#notfound {
+	display:inline-block;
+	opacity:0;
+	padding:50px;
+	line-height:1.3em;
+}
+
+#seasonPDF {
+	text-align:center;
+	margin-bottom:10px;
+	line-height:1.5em;
+}
+
+#liner-panel, #liner-panel-lobo {
+	padding:0px;
+	line-height:1.5em;
+	font-size:0.9em;
+	overflow-y:overlay;
+}
+
+#liner-panel, #liner-panel-lobo h2 {
+	font-size: 1.3em;
+	line-height: 1.3em;
+}
+
+#liner-panel, #liner-panel-lobo h3 {
+	font-size: 1.2em;
+	line-height: 1em;
+}
+
+#liner-notes-container, #liner-notes-container-lobo {
+/* 	border: thin blue solid; */
+	margin:20px 5%;
+}
+
+#liner-notes-container, #liner-notes-container-lobo p {
+  line-height:1.5em;
+	font-size:0.9em;
+}
+
+.translation-wrapper {
+	font-size:1em;
+	width:100%;
+}
+
+.foreign, .english {
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	display:inline-block;
+	padding:1px;
+	font-weight:bold;
+/* 	border:thin solid blue; */
+}
+
+.english {
+	float:right;
+	margin-top:10px;
+	margin-bottom:15px;
+}
+
+.foreign {
+	margin-top:10px;
+}
+
+.translation-border {
+	padding:10px;
+	display:block;
+	box-shadow:3px 3px 3px rgba(78,27,125,1);
+	background: rgba(255, 255, 255, 0.75);
+	width:99%;
+	max-width:375px;
+	margin:auto;
+}
+
+.digital-stores-wrapper {
+	margin-left:auto;
+	margin-right:auto;
+	width:95%;
+	max-width:700px;
+}
+
+.google-play-badge, .amazon-badge, .spotify-badge {
+	display:inline-block;
+	width:32%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+@media only screen and (max-width: 600px) and (min-height: 700px) {
+
+.google-play-badge, .amazon-badge, .spotify-badge {
+		display:block;
+		width:99%;
+	}
+	
+}
+
+.english-only {
+	font-weight:bold;
+	margin-top:10px;
+	margin-bottom:15px;
+}
+
+.liner-list, .liner-list-no-click {
+	display:inline-block;
+	padding-left:15px;
+	text-indent:-15px;
+	font-weight:bold;
+	color: #404040;
+	line-height:1.5em;
+}
+
+.liner-list {
+	cursor:pointer;
+}
+
+.backtotop, .backtoorder {
+	cursor:pointer;
+	display:inline-block;
+}
+
+@media only screen and (min-width:450px) {
+	.backtoorder {
+		float:right;
+	}
+}
+
+#liner-table-of-contents, #liner-table-of-contents-lobo {
+	margin:20px 0;
+}
+
+.price-list {
+	display:inline-block;
+	margin-left:10%;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.streampage {
+	display:none;
+}
+
+.streampage a {
+	font-size:0.8em;
+}
+
+.stream-content {
+/* 	border:thin red solid; */
+	margin-top:20px;
+	width:85%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.streamimg {
+	width:100%;
+	box-shadow:3px 3px 5px #404040;
+	max-width:100px;
+	margin:0 auto;
+	margin-right:0px;
+}
+
+.streamimgdiv, .streamtextdiv {
+	margin:8px;
+	display:inline-grid;
+}
+
+.streameventdiv {
+/* 	border:thin blue solid; */
+	white-space:nowrap;
+	margin:10px;
+	display:block;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+.streamimgdiv {
+/* 	border:thin orange solid; */
+/* 	display:inline-block; */
+	float:left;
+	width:30%;
+}
+
+.streamtextdiv {
+/* 	border:thin green solid; */
+/* 	display:inline-block; */
+	padding-left:10px;
+	white-space:normal;
+	width:65%;
+	line-height:1.3em;
+/* 	float:right; */
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+
+#gregimg {
+		content:url("../img/GregSkidmore1.jpg");
+	}
+	
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+.foreign, .english {
+		width:49%;
+	}
+
+.english, .foreign {
+	margin-top:10px;
+	margin-bottom:15px;
+	}
+
+.translation-wrapper {
+	margin-left:auto;
+	margin-right:auto;
+	width:95%;	
+	}
+}
+
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+
+/* ==========================================================================
+Learn more
+========================================================================== */
+
+.singerlist {
+	margin-top:0px;
+	display:inline-block;
+	line-height:1.2em;
+/* 	border:thin blue solid; */
+	padding:1px 0 5px 15px;
+}
+
+.learn-content {
+	display:none;
+	color:black;
+	font-size:0.8em;
+}
+
+.learn-content .title, .streampage .title {
+	font-weight:bold;
+	line-height:1.2em;
+	margin-top:15px;
+	padding:5px 0 5px 15px;
+	font-size:2em;
+	text-align:center;
+}
+
+.learnimg {
+	display:block;
+	margin:5% auto;
+	width:80%;
+	max-width:300px;
+	height:auto;
+	box-shadow:3px 3px 5px #404040;
+/* 	image-rendering:crisp-edges; */
+/* 	border-collapse:separate; */
+}
+
+_:-ms-input-placeholder, :root .learnimg {
+	box-shadow:none;
+}
+
+.learn-content .venue, .learn-content .date, .learn-content .price {
+	font-size:1.5em;
+	text-align:center;
+	padding:5px 0 5px 15px;
+}
+
+.learn-content .LengthInt {
+	font-size:1em;
+	text-align:center;
+	padding:5px 0 5px 15px;
+}
+
+.learn-content .longdescription {
+	padding:5px 0 5px 15px;
+	line-height:1.2em;
+}
+
+.composers, .programme, .description, .listencontent {
+	display:inline-block;
+	line-height:1.2em;
+/* 	border:thin blue solid; */
+	padding:5px 0 5px 15px;
+}
+
+.voicename, .composerslabel {
+/* 	border:thin red solid; */
+	margin-right:5px;
+	line-height:1.2em;
+	width:80px;
+	display:block;
+	padding:5px 0 0 15px;
+}
+
+.singerslabel, .composerslabel, .programmelabel, .descriptionlabel, .listenlabel {
+	margin:10px 0 5px 0;
+	font-weight:bold;
+	padding:5px 0 5px 15px;
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+/* @media only screen and (min-width: 768px) and (min-height: 700px) {
+	
+} */
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* @media only screen and (min-width: 1086px) and (min-height: 700px) {
+	
+} */
+
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* ==========================================================================
+Grid
+========================================================================== */
+
+.gridbox {
+/* 	border:thin blue solid; */
+	position:relative;
+	color:black;
+	box-shadow:3px 3px 3px rgba(78,27,125,1);
+	background: rgba(255, 255, 255, 0.75);
+	padding:1em;
+	text-align:center;
+	overflow-y:auto;
+	vertical-align:top;
+}
+
+.gridrow {
+	position:relative;
+	width:auto;
+	display:block;
+/* 	border:thin green solid; */
+}
+
+.oneperrow, .twoperrow, .threeperrow {
+	top:0px;
+	bottom:10px;
+}
+
+.oneperrow {
+	width:95%;
+	margin:5px;
+	margin-top:10px;
+	margin-right:1px;
+	display:inline-table;
+}
+
+.twoperrow {
+	width:45%;
+	margin:10px;
+	height:auto;;
+	display:inline-block;
+}
+
+.threeperrow {
+	width:30%;
+	margin:10px;
+	display:inline-block;
+	height:auto;
+}
+
+.futureswitch-wrapper {
+/* 	border:thin orange solid; */
+/* 	width:96%; */
+  margin-top:10px;
+}
+
+.futureswitch {
+/* 	border:thin blue solid; */
+	display:block;
+	line-height:1em;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	width:280px;
+	height:20px;
+	background:transparent;
+	margin-top:0px;
+	/*text-align:center;*/
+}
+
+a.futureselected {
+	text-decoration:underline;
+	font-weight:bold;
+/* 	display:inline-block; */
+}
+
+div.futureselected {
+	text-decoration:underline;
+	font-weight:bold;
+}
+
+.futureswitch a:not(.futureselected) {
+	font-weight:normal;
+}
+
+#Future, #Past {
+	color:rgb(106,73,138);
+	width:130px;
+	cursor:pointer;
+	font-size:1em;
+	line-height:1em;
+	top:0px;
+	position:relative;
+	display:inline-block;
+}
+
+#Future {
+/* 	border:thin green solid; */
+/* 	float:left;
+	padding-left:20px; */
+	text-align:right;
+}
+
+#Past {
+/* 	border:thin red solid; */
+/* 	float:right;
+	padding-right:20px;*/
+	text-align:left;
+}
+
+.gridbox h2 {
+	line-height:1em;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+button.accordion, button.cd-accordion {
+    background-color: rgba(106,72,138,0.3);;
+    color: black;
+    cursor: pointer;
+    padding: 2px;
+    width: 96%;
+    text-align: center;
+    border: none;
+    outline: none;
+		font-family:"Quattrocento";
+	margin:0px;
+}
+
+button.cd-accordion {
+	font-weight:bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.accordion.active, button.accordion:hover, button.cd-accordion.active, button.cd-accordion:hover {
+    background-color: rgba(106,73,138,0.8);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.panel {
+    padding: 0px 3% 0px 4%;
+/*     background-color: white; */
+    opacity: 0;
+		width:96%;
+		height:0;
+		overflow-y:auto;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.panel.show {
+    opacity: 1;
+/* 		border:thin black solid; */
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+	.futureswitch{
+		background:transparent;
+		box-shadow:none;
+		margin-top:0px;
+	}
+	
+	.gridbox {
+		height:auto;
+	}
+	
+	.gridrow{
+		height:auto;
+	}
+	
+	button.accordion, button.cd-accordion {
+		padding: 2px;
+	}
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+	.futureswitch {
+		background:transparent;
+		box-shadow:none;
+	}
+	
+	.gridbox {
+		height:auto;
+	}
+	
+	.gridrow{
+		height:auto;
+	}
+	
+	button.accordion, button.cd-accordion {
+		padding: 5px;
+	}
+}
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* ==========================================================================
+Hero
+========================================================================== */
+#herowrapper {
+	position:relative;
+	width:100%;
+/*	border:thin blue solid; */
+	padding:0em 0em;
+}
+
+#herobox {
+/*	border:thin red solid; */
+	position:relative;
+	top:0px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 8px;
+	padding-bottom: 10px;
+	background: rgba(255, 255, 255, 0.7);
+	font-family: "Quattrocento";
+	line-height: 2.5em;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-shadow:0px 13px 10px -10px #404040;
+}
+#herobox h1 { font-size: 1em; font-weight: bold; letter-spacing: 0.3em; margin: 3px; color:rgb(106,73,138); line-height:1.3em;}
+#herobox h1 span { color: #3c3957; display: inline-block; }
+#herobox p { letter-spacing: 0.05em; font-size:0.8em; line-height:1.2em;}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+	#herobox {top:10px; line-height: 2em; max-width: 800px;box-shadow:3px 3px 10px #404040;padding-bottom: 10px;}
+	#herobox h1 { font-size: 2.4em; letter-spacing: 0.3em; margin: 5px; color:rgb(106,73,138); line-height:1em;}
+	#herobox p { letter-spacing: 0.05em; font-size:0.8em; line-height:1em;}
+	
+	#herowrapper {
+	padding:0 1em;
+}
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+	#herobox {top:10px; line-height: 2em; padding-bottom:15px; max-width: 800px;box-shadow:3px 3px 10px #404040;}
+	#herobox h1 { font-size: 2.7em; letter-spacing: 0.3em; margin: 5px; color:rgb(106,73,138); line-height:1em;}
+	#herobox p { letter-spacing: 0.05em; font-size:1em; line-height:1em;}
+
+	#herowrapper {
+	padding:0 1em;
+}
+
+
+}
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* ==========================================================================
+Next Event
+========================================================================== */
+#next-event-wrapper {
+	position:relative;
+	width:100%;
+	/*border:thin blue solid;*/
+	padding:0em 0em;
+	top:0px;
+}
+
+#nextlink{
+	font-weight:normal;
+}
+
+#next-event {
+/* 	border:thin red solid; */
+	display:block;
+	opacity:0;
+	position:absolute;
+	top:20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding:5px;
+	background: rgba(255, 255, 255, 0.7);
+	font-family: "Quattocento";
+	/*line-height: 2.5em;*/
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+/* 	box-shadow:0px 13px 10px -10px #404040; */
+}
+
+#next-event:hover{
+	background:rgba(106,73,138,0.6);
+	cursor:pointer;
+}
+
+#next-event:hover h1 {
+	color:black;
+}
+
+#next-event h1 { font-size: 0.8em; font-weight: bold; letter-spacing: 0.1em; margin: 3px; color:rgb(106,73,138); line-height:1em; display:inline; vertical-align:middle}
+#next-event h1 span { color: #3c3957; display: inline-block; }
+#next-event p { letter-spacing: 0.05em; font-size:0.7em; line-height:1em; color:black; display:inline; vertical-align:middle;}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+	#next-event {display:block; position:relative; opacity:1; top:0px; line-height: 1em; max-width: 700px; box-shadow:3px 3px 10px #404040;}
+	#next-event h1 { font-size: 1em; letter-spacing: 0.3em; margin: 10px; line-height:1em;}
+	#next-event p { letter-spacing: 0.1em; font-size:0.9em; line-height:1.5em; color:black;}
+	#next-event-wrapper {padding:0 1em;top:25px;}
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+	#next-event {display:block; position:relative; opacity:1; top:0px; line-height: 1em; padding-bottom:5px;max-width: 700px;box-shadow:3px 3px 10px #404040;}
+	#next-event h1 { font-size: 1.3em; letter-spacing: 0.1em; margin: 15px; line-height:1em;}
+	#next-event p { letter-spacing: 0.05em; font-size:1em; line-height:1.5em;}
+	#next-event-wrapper {padding:0 1em;top:25px;}
+}
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* ==========================================================================
+Box Content
+========================================================================== */
+
+.streamlabel {
+/* 	border:thin green solid; */
+	margin-top:0px;
+	margin-bottom:10px;
+	font-size:0.7em;
+	box-shadow:1px 1px 3px #404040;
+	padding:5px;
+	display:inline-block;
+}
+
+.streamlabel a:hover {
+	cursor:pointer;
+}
+
+.Road201718 {
+	background:rgba(220,0,0,0.4);
+}
+
+.Liturgy201718 {
+	background:rgba(0,200,0,0.4);
+}
+
+.London201718 {
+	background:rgba(0,0,220,0.4);
+}
+
+.gridbox h1, .streampage h1 {
+	font-size:1em;
+	font-weight:bold;
+	margin-top:0px;
+	line-height:1.2em;
+	letter-spacing:0.13em;
+}
+
+.gridbox h2, .streampage h2 {
+	font-size:0.8em;
+	line-height:1.5em;
+}
+
+.gridbox h3 {
+	font-size:1em;
+	letter-spacing:0.1em;
+	margin-top:1em;
+}
+
+.gridbox h2 a {
+	font-size:1em;
+}
+
+.gridbox img {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:1em;
+	margin-bottom:1em;
+	width:auto;
+	height:auto;
+	box-shadow:2px 2px 5px #404040;
+/* 	border-collapse:separate; */
+}
+
+_:-ms-input-placeholder, :root .gridbox img {
+	box-shadow:none;
+}
+
+.oneperrow img {
+	max-width:75%;
+	/* max-height:50%; */
+}
+
+.twoperrow img {
+	max-width:65%;
+}
+
+.threeperrow img {
+	max-width:50%;
+}
+
+.description {
+	padding:0;
+	font-size:0.8em;
+	line-height:1.2em;
+}
+
+.learn {
+	font-size:0.8em;
+	cursor:pointer;
+}
+
+.LengthInter {
+	font-size:0.9em;
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+	.gridbox img {
+	}
+	
+	.gridbox h1 {
+	}
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+	.gridbox img {
+	}
+	
+	.gridbox h1 {
+	}
+}
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* ==========================================================================
+Primary Style
+========================================================================== */
+*, *::after, *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*::after, *::before {
+/* 	content: ''; */
+}
+
+body {
+	font-size: 100%;
+	font-family: "Quattrocento", serif;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background:url('../img/bw-background-1600a.jpg') no-repeat center center fixed;
+	background-size:cover;
+	opacity:1;
+}
+
+a {
+	color: #404040;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+a:hover {
+	color:rgb(106,73,138);
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+	body {
+		overflow-y:hidden;
+		overflow-x:hidden;
+	}
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+	body {
+		overflow-x:hidden;
+		overflow-y:hidden;
+	}
+}
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* ==========================================================================
+Main Components
+========================================================================== */
+
+.cont-wrapper {
+	/*	border:thin red solid;*/
+	position:absolute;
+	/* set the position of cont-wrapper for mobile */
+	top: 20px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding-top: 10px;
+	padding-left:5%;
+	padding-right:2%;
+	overflow-y:auto;
+	overflow-x:hidden;
+	background-color:rgba(255,255,255,0.8);
+}
+
+#contact-content {
+	padding:10px 0 0 0;
+}
+
+#listen-content {
+	padding:20px 0 0 0;
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+.cont-wrapper {
+	overflow-y:auto;
+	overflow-x:hidden;
+	box-shadow:5px 5px 10px #404040;
+	}
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+.cont-wrapper {
+		overflow-y:auto;
+		overflow-x:hidden;
+		box-shadow:5px 5px 10px #404040;
+	}
+}
+
+
+/* --------------------------------------------- CD-TABS ------------------------------------------ */
+
+.tabitself {
+	background:rgba(255,255,255,0.5);
+}
+
+.cd-tabs {
+/* 	border:orange dotted; */
+/* 	top:-35px; */
+	position: relative;
+	width: 95%;
+	max-width: 2000px;
+	margin: 10px auto;
+}
+.cd-tabs:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.cd-tabs::after {
+	/* subtle gradient layer on top right - to indicate it's possible to scroll */
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 20px; /* needs to be the same as <a> */
+	width: 50px;
+	z-index: 1;
+	pointer-events: none;
+	background: -webkit-linear-gradient( right , #f8f7ee, rgba(248, 247, 238, 0));
+	background: linear-gradient(to left, #f8f7ee, rgba(248, 247, 238, 0));
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+	-moz-transition: opacity .3s 0s, visibility 0s 0s;
+	transition: opacity .3s 0s, visibility 0s 0s;
+/*	border:thin brown solid; */
+}
+
+.cd-tabs.is-ended::after {
+	/* class added in jQuery - remove the gradient layer when it's no longer possible to scroll */
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+	-moz-transition: opacity .3s 0s, visibility 0s .3s;
+	transition: opacity .3s 0s, visibility 0s .3s;
+}
+.cd-tabs nav {
+/* 	border:thin red dotted; */
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+/*	background:transparent; */
+/*	background: rgba(0,255,255,0.7); */
+/* 	box-shadow: inset 0 -2px 3px rgba(203, 196, 130, 0.06); */
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+	.cd-tabs {
+		top:10px;
+		margin: 2em auto;
+		}
+ 
+	.cd-tabs::after {
+		display: none;
+	}
+	
+	.cd-tabs nav {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 100%;
+	 box-shadow: inset -2px 0 3px rgba(203, 196, 130, 0.06);
+	 z-index: 1;
+	 overflow-x: hidden;
+	 }
+	 
+	 /* change dimensions of cont-wrapper for tablet*/
+	 
+	 .cont-wrapper {
+		top: 0px;
+		left: 100px;
+		padding-top:10px;
+	 }
+	}
+	
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+	
+	.cd-tabs nav {
+		position: relative;
+		float: none;
+		/*background: transparent;*/
+		box-shadow: none;
+		
+	}
+
+/* change dimensions of cont-wrapper for laptop */
+
+	.cont-wrapper {
+		top: 40px;
+		left: 0px;
+	}
+	
+	.cd-tabs {
+		top:10px;
+		margin: 2em auto;
+	}
+}
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* --------------------------------------------- CD-TABS-NAVIGATION ------------------------------------------ */
+
+.cd-tabs-navigation {
+	margin-left:0px;
+	margin-right:auto;
+	width: 500px; /* IF YOU CHANGE THE NUMBER OF TABS, you need to change this hard-coded width value :( */
+/* 	border: thin green solid; */
+/*	background: rgba(255,255,255,0.5); */
+/*	overflow-x:hidden; */
+}
+
+.cd-tabs-navigation-container {
+	position:absolute;
+	display:inline-block;
+/* 	border:thin green solid; */
+	height:auto;
+}
+
+.cd-tabs-navigation:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.cd-tabs-navigation li {
+	float: left;
+/*	border:thin orange solid; */
+}
+.cd-tabs-navigation a {
+	position: relative;
+	display: block;
+	height: 20px;
+	width: 100px;
+	text-align: center;
+	font-size: 12px;
+	font-size: 0.75rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 700;
+	color: #3c3957;
+	padding-top: 7px;
+}
+
+.cd-tabs-navigation a.selected {
+	background-color: #ffffff !important;
+	box-shadow: inset 0 3px 0 rgb(106,73,138);
+	color: rgb(106,73,138);
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+	.cd-tabs-navigation {
+		margin:0;
+		/* move the nav to the left on medium sized devices */
+		width: 100px;
+		float: left;
+/*		border:thin green solid; */
+		background: none;
+		height:auto;
+		display: inline-block;
+}
+	
+.cd-tabs-navigation-container {
+	position:static;
+	display:block;
+/* 	border:thin green solid; */
+	height:100%;
+}
+
+.cd-tabs-navigation a {
+/*	border:thin red solid; */
+	height:35px;
+	width: 100px;
+	padding-top:12px;
+	padding-bottom:auto;
+}
+
+.cd-tabs-navigation a.selected {
+	box-shadow: inset 3px 0 0 rgb(106,73,138);
+}
+
+.cd-tabs-navigation a::before {
+	top: 22px;
+	}
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+
+.cd-tabs-navigation a:hover {
+/* 	color: black; */
+	background-color: rgba(106,73,138, 0.2);
+}
+	
+.cd-tabs-navigation {
+	margin:0;	
+	/* tabbed on top on big devices */
+	width: auto;
+/*		background: rgba(255,0,255,0.8); */
+	box-shadow: inset 0 -2px 3px rgba(203, 196, 130, 0.06);
+	border:none;
+}
+	
+.cd-tabs-navigation-container {
+	position:static;
+	display:block;
+/* 	border:thin green solid; */
+	height:100%;
+}
+
+	.cd-tabs-navigation a {
+		height: 40px;
+		line-height: 40px;
+		width: auto;
+		text-align: left;
+		font-size: 1.2em;
+		padding: 0 3em 0 3em;
+	}
+	
+	.cd-tabs-navigation a.selected {
+		box-shadow: inset 0 3px 0 rgb(106,73,138);
+	}
+	
+	.cd-tabs-navigation a::before {
+		top: 50%;
+		margin-top: -10px;
+		margin-left: 0;
+		left: 38px;
+	}
+}
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+/* --------------------------------------------- CD-TABS-CONTENT ------------------------------------------ */
+
+.cd-tabs-content {
+	background:transparent;
+/*   border:thick blue solid; */
+	height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position:static;
+}
+
+.cd-tabs-content li {
+	display:block;
+	/* 	display: none; */
+	padding:0;
+	opacity:0;
+/* 	filter:alpha(opacity=0); */
+}
+
+.cd-tabs-content li.selected {
+	display: block;
+/* 	opacity:1; */
+/* 	filter:alpha(opacity=100); */
+}
+
+li.selected .cont-wrapper {
+	z-index:5;
+}
+
+.cd-tabs-content li p {
+/* 	font-size: 0.875rem;
+	line-height: 1.3em; */
+	color: black;
+	margin-bottom: 0;
+  margin-top: 1em;
+}
+
+/* -------------- START min-width: 768px - min-height: 700px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 768px) and (min-height: 700px) {
+	
+	.cd-tabs-content {
+/*	min-height: 480px; */
+
+}
+
+	.cd-tabs-content li {
+		padding: 0 0 0 84px;
+	}
+}
+
+/* -------------- END min-width: 768px ----------------- */
+/* ------------------------------------------------- */
+
+/* -------------- START min-width: 1086px ----------------- */
+/* ------------------------------------------------- */
+
+@media only screen and (min-width: 1086px) and (min-height: 700px) {
+	
+	.cd-tabs-content {
+/*	min-height:0; */
+
+}
+
+	.cd-tabs-content li {
+		padding: 0 10px 0 0;
+	}
+	
+	.cd-tabs-content li p {
+/* 		font-size: 1em; */
+	}
+}
+
+/* -------------- END min-width: 1086px ----------------- */
+/* ------------------------------------------------- */

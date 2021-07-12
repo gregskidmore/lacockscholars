@@ -1,0 +1,1445 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/pace.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style1.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/es-style.css" />
+	<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+	<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
+	<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+
+	<link rel="icon" href="../img/LSfavicon.jpg">
+	
+	<script src="js/pace.js" type="text/javascript"></script>
+	<script src="updateevents.php" type="text/javascript"></script>
+	
+	<script>
+	// Check to see if the user is running either IE or Edge
+
+	// At least Safari 3+: "[object HTMLElementConstructor]"
+	// var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+
+	// Internet Explorer 6-11
+		var isIE = /*@cc_on!@*/false || !!document.documentMode;
+  
+	// Edge 20+
+		var isEdge = !isIE && !!window.StyleMedia;
+		
+		if (isEdge || isIE ) {
+			alert("This website is designed to work best with Google Chrome, Firefox, or Safari. Development is underway to accommodate the peculiarities of Microsoft's browsers, Internet Explorer and Edge. We recommend that you use Chrome, Firefox, or Safari to view this website. If these browsers are unavailable to you it should still be possible to view the site, but please accept our apologies for any formatting errors.")
+		}	
+	</script>
+	
+	<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
+
+	<title>The Lacock Scholars</title>
+
+</head>
+
+<body>
+
+<!-- For Facebook sharing button -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- End Facebook sharing button -->
+	
+	<img id="bgimage" style="display:none;" src="../img/bw-background-1600a.jpg">
+	
+	<div id="loading" style="background: rgba(255, 255, 255, 0.8); box-shadow:3px 3px 10px #404040; width:250px; padding:20px 50px; margin-top:100px; margin-left:auto; margin-right:auto;">
+		<center>
+		<img src="img/loading-purple2.gif">
+			<h1>
+				Loading images...
+			</h1>
+		</center>
+	</div>
+	
+	<div id="background">
+
+		<div id="herowrapper">
+
+			<div id="herobox">
+				<h1><span style="color:grey; margin-right: 0px;">THE</span> LACOCK <span style="margin-left:0px; color:grey;">SCHOLARS</span></h1>
+				<p style="color:black; font-weight:bold;">directed by
+					<font style="font-style:italic;">Greg Skidmore</font>
+				</p>
+			</div>
+
+		</div>
+
+		<div id="next-event-wrapper">
+				<div id="next-event">
+					<h1>NEXT EVENT:</h1>
+					<p></p>
+				</div>
+		</div>
+
+		<div class="cd-tabs">
+			<nav>
+				<ul class="cd-tabs-navigation">
+					<li class="tabitself"><a id="concerts_tab" data-content="concerts" href="#0">CONCERTS</a></li>
+					<li class="tabitself"><a id="about_tab" data-content="about" href="#0">ABOUT</a></li>
+					<li class="tabitself"><a id="listen_tab" data-content="listen" href="#0">LISTEN</a></li>
+					<li class="tabitself"><a id="cd-recording_tab" data-content="cd-recording" href="#0">CD RECORDING</a></li>
+					<li class="tabitself"><a id="contact_tab" data-content="contact" href="#0">CONTACT</a></li>
+				</ul>
+			</nav>
+
+			<ul class="cd-tabs-content">
+				
+				<li data-content="concerts" class="selected section">
+
+					<div class="cont-wrapper" id="concerts-content">
+						<div class="futureswitch-wrapper">
+							<div class="futureswitch">
+								<a onclick="toggleFuture(this);" class="futureselected" id="Future">Future Events</a>&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="togglePast(this);" id="Past">Past Events</a>
+							</div>
+						</div>
+					</div>
+
+				</li>
+
+				<li data-content="about" class="section">
+
+					<div class="cont-wrapper" id="about-content">
+						
+						<div id='about-content-wrapper'>
+
+							<img id="logo" src="img/LacockScholarsLogo-s.jpg"> Originally formed from a group of young participants on <a target="_blank" href="http://www.lacock.org">Lacock Courses</a>, and still retaining a close association with these events, The Lacock Scholars are dedicated to small-ensemble, a capella consort singing of Renaissance polyphonic music and plainsong. We are inspired by our association with <a target="_blank" href="http://www.saintcuthbert.org/">St Cuthbert's Church, Earl's Court</a>, and explore the relationship between concert performance, liturgical observance, and the creation of unified, holistic experiences for our audiences.<br><br>
+							Our concerts last approximately an hour and have no interval. They are meant to be seamless and contemplative, allowing the music and the building to speak to one another, and our audiences to come to the event on their own terms.<br><br>
+              Now branching out from our bass in Earl's Court, in the last few years The Lacock Scholars have performed in the Brighton Early Music Festival, the Baroque Voices series of concerts at Grays of Bond Street, the Cherubim Youth Music Festival, and at Gloucester Cathedral and Tewkesbury Abbey. In May 2018, we premiered a major commission by composer Ben Rowarth as part of the London Festival of Contemporary Church Music. We continue to bring our unique performance style to venues around London, recently performing at Christ Church, Hampstead and Holy Trinity, Sloane Square.<br><br>
+							<b>Greg Skidmore, Musical Director</b><br><br>
+							<img id="gregimg" src="img/GregSkidmore2.jpg"> Greg is one of the UK's leading consort singers, working regularly with groups such as The Tallis Scholars, I Fagiolini, The Gabrieli Consort, Alamire, and many others.<br><br>
+							He also has a keen academic interest, having studied for a DPhil at Oxford before pursuing full-time professional singing and conducting work in London. His interest in the history and complexity of Christian liturgy is nourished by singing regularly with the choir of The London Oratory.<br><br>
+							He has given workshops on various collections of Renaissance polyphonic repertoire in the UK, France, Canada, Australia, and New Zealand. Greg was a Lay Clerk in the English cathedral tradition for many years and while living in Oxford, started his own men's voice ensemble called I Dedicati.<br><br>
+							Greg also is busy as a soloist, performing with choral societies throughout the UK, as well as groups such as Ex Cathedra, The Irish Baroque Orchestra, Orchestra of the Age of the Enlightenment, and others. He also regularly presents recitals of song repertoire from the 19th and 20th centuries. More information about Greg can be found on his personal website, <a target="_blank" href="http://www.gregskidmore.co.uk">www.gregskidmore.co.uk</a>
+							
+						</div>
+					  
+						<div class="foto-wrapper" style="display:block; margin-top:20px; width:100%; max-width:1000px; margin-left:auto; margin-right:auto;">
+							
+							<center>
+							<h2>
+							Photo Gallery	
+							</h2>
+							</center>
+														
+							<div id="rg-gallery" class="rg-gallery">
+								<div class="rg-thumbs">
+									<!-- Elastislide Carousel Thumbnail Viewer -->
+									<div class="es-carousel-wrapper">
+										<div class="es-nav">
+											<span class="es-nav-prev">Previous</span>
+											<span class="es-nav-next">Next</span>
+										</div>
+										<div class="es-carousel">
+											<ul>
+												<li><a href="#"><img src="images/thumbs/LS1409s.jpg" data-large="images/LS1409a.jpg" alt="image01" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1433s.jpg" data-large="images/LS1433a.jpg" alt="image02" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1442s.jpg" data-large="images/LS1442a-1.jpg" alt="image03" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1445s.jpg" data-large="images/LS1445a.jpg" alt="image04" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1455s.jpg" data-large="images/LS1455a.jpg" alt="image05" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1465s.jpg" data-large="images/LS1465a.jpg" alt="image06" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1476s.jpg" data-large="images/LS1476a.jpg" alt="image07" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1486s.jpg" data-large="images/LS1486a.jpg" alt="image08" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1500s.jpg" data-large="images/LS1500a.jpg" alt="image09" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1504s.jpg" data-large="images/LS1504a.jpg" alt="image10" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1526s.jpg" data-large="images/LS1526a.jpg" alt="image11" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1564s.jpg" data-large="images/LS1564a.jpg" alt="image12" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1589s.jpg" data-large="images/LS1589a.jpg" alt="image13" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1626s.jpg" data-large="images/LS1626a.jpg" alt="image15" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1635s.jpg" data-large="images/LS1635a.jpg" alt="image16" data-description="" /></a></li>
+												<li><a href="#"><img src="images/thumbs/LS1646s.jpg" data-large="images/LS1646a.jpg" alt="image17" data-description="" /></a></li>
+											</ul>
+										</div>
+									</div>
+									<!-- End Elastislide Carousel Thumbnail Viewer -->
+								</div><!-- rg-thumbs -->
+							</div><!-- rg-gallery -->
+														
+							<!--
+							<div class="slider">
+								<img src="img/LS1409.jpg"/>
+								<img src="img/LS1433.jpg"/>
+							</div>
+							-->
+							
+						</div>
+					
+					</div>
+					
+				</li>
+				
+				<li data-content="listen" class="section">
+
+					<div class="cont-wrapper" id="listen-content">
+							<div id="listen-wrapper">
+								<h2>Listen to live recordings and clips taken from our regular series of concerts at St Cuthbert's.</h2>
+							</div>							
+					</div>
+
+				</li>
+				
+				<li data-content="cd-recording" class="section">
+					
+					<div class="cont-wrapper" id="cd-recording-content">
+						<div id="cd-recording-wrapper">
+							<button class="cd-accordion" id="liner-button">Notes on 'Music by Tallis, Lassus, Monteverdi, and others'</button>
+							<div class="panel" id="liner-panel">
+								<div id="liner-notes-container">
+								<center>
+										<h2>The Lacock Scholars</h2>
+										<h3>directed by Greg Skidmore<br><br>Music by Tallis, Lassus,<br>Monteverdi, and others</h3><br>
+										<a style="cursor:pointer; margin-top:1em;" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</a>
+								</center>
+								<br>
+                  <p style="margin-bottom:20px;">
+                    Our first CD release consists of recordings of some of our favourite repertoire, drawn from the regular series of concerts we give at St Cuthbert's, Earl's Court, in London. The disc itself, therefore, has no unifying theme, and I chose repertoire, in consultation with the singers, that highlights our versatility. The music on this recording therefore mirrors the broad range of our projects to date; while all a capella Renaissance music, it represents nearly a century of polyphonic composition, both sacred and secular, in many different styles, national traditions, languages, and moods.</p>
+									
+									<div id="liner-table-of-contents">
+									<h3>Table of Contents</h3><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#verbum');">1: Verbum caro factum est - John Sheppard (c. 1515 - 1558)</a><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#nesciens');">2: Nesciens mater - Jean Mouton (c. 1455 - 1522)</a><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#nunc');">3: Nunc dimittis - Josquin des Prez (c. 1450-55 - 1521)</a><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#noel');">4: Noel, adieu thou court's delight - Thomas Weelkes (1576 - 1623)</a><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#salutaris');">5: O salutaris hostia a6 - William Byrd (c. 1540 - 1623)</a><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#chiotami');">6: Ch'io t'ami e t'ami pi&ugrave; de la mia vita - Claudio Monteverdi (1567 - 1643)</a><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#requiem');">7: Missa pro defunctis a6: Introitus & Kyrie - Duarte Lobo (c. 1564-9 - 1646)</a><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#musica');">8: Musica dei donum - Orlande de Lassus (c. 1530-32 - 1594)</a><br>
+									<a class="liner-list" onclick="javascript:linerScroll('#suscipe');">9: Suscipe quaeso - Thomas Tallis (c. 1505 - 1585)</a><br>										
+									</div><br><br>
+																
+								<h3 id="verbum">1: Verbum caro factum est - John Sheppard (c. 1515 - 1558)</h3>
+								<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								One of our most important motivations when programming our concerts is tying in with the church's year and we have accomplished this in many ways over our last few seasons. This disc's release corresponds with Christmastime, so it begins with two pieces associated with the Nativity of Our Lord. <i>Verbum caro</i>, this well-known and well-loved Christmas favourite, is a setting of the ninth responsory at Matins on Christmas Day. It articulates the seminal belief of Christian faith, drawn from John's gospel, that the word was made flesh.
+									<div class="translation-wrapper">
+										<div class="foreign">
+											<div class="translation-border">
+												Verbum caro factum est<br>
+												Et habitavit in nobis<br>
+												cuius gloriam vidimus<br>
+												quasi unigeniti a Patre<br>
+												plenum gratiae et veritatis.<br><br>
+												Verse: In principio erat verbum<br>
+												et verbum erat apud Deum<br>
+												et Deus erat verbum.<br><br>
+												Gloria patri et Filio<br>
+												et Spiritui Sancto.
+											</div>
+										</div>
+										<div class="english">
+											<div class="translation-border">
+											And the Word was made flesh,<br>
+											and dwelt among us,<br>
+											whose glory we beheld,<br>
+											as of the only begotten of the Father,<br>
+											full of grace and truth.<br><br>
+											In the beginning was the Word,<br>
+											and the Word was with God,<br>
+											and the Word was God.<br><br>
+											Glory be to the Father and to the Son<br>
+											and to the Holy Spirit.
+											</div>
+										</div>
+									</div>
+									<div style="clear:both; display:block;"></div>
+									John Sheppard has been (perhaps erroneously) associated with St Paul's Cathedral as a boy, and the first solid documentary evidence we have points to his appointment as <i>Informator Choristorum</i> at Magdalen College, Oxford in 1543. He stayed there only a short time, perhaps five years or so, before moving to the Chapel Royal, England's premier musical establishment. There he would have met and worked regularly with Thomas Tallis, who had joined the Chapel in 1543. He stayed employed by the Crown until his death in December 1558, one month after the accession of Elizabeth I. His time there would have corresponded with the most violent musical upheavals of the English Reformations; he arrived during the reign of Edward VI when music was being drastically reformed by Archbishop Cranmer to be simple, protestant, and clear but only a few years later had to adapt to the new (old) style of lavish Catholic liturgical observance once Mary Tudor took the throne.<br><br>
+									Sheppard's music survives mainly in one of the most important collections of 16-century English music, a set of manuscript partbooks kept in the library of Christ Church, Oxford known as The Baldwin Partbooks. This is the only source for <i>Verbum caro</i> and it is lacking its tenor <i>cantus firmus</i>, which has been reconstructed. <i>Verbum caro</i> was almost certainly composed during Mary's reign and is characteristic of the style for which Sheppard is most well-known - thick, constant textures in which free imitative counterpoint weaves its way around slow-moving <i>cantus firmus</i> chant melodies. Sheppard broke from the tradition of his musical mentors John Taverner and the composers of the Eton Choirbook by relentlessly maintaining his thick textures throughout large scale works. His music creates vast expanses of monumental counterpoint.<br><br>
+									In our recording of this work, I chose a tempo which is faster than it is often performed. I believe this work contrasts with some of Sheppard's other famous motets, notably his two settings of <i>Libera nos</i>, in that it is primarily joyful and has an energy forever driving it along. This, of course, corresponds to the text. I imagine 16th-century singers relishing being released from the austerity of Advent on Christmas morning and I'm reminded of my own time singing in cathedrals of the relief and excitement that Christmas morning represented for all of us after trudging through incredibly busy Christmas seasons! In an effort to provide a contrast from the common practice of this music being dominated by the soprano line, which is often referred to in a way I find quite empty as 'soaring' (by those seemingly unaware that the rest of the parts are doing their best to soar too!), we angled our two first sopranos slightly away from the microphones. This, I feel, allows the inner parts to be the engine room of the texture, highlighting with greater clarity how the music works and allowing the top line to shimmer, rather than blast.<br><br>
+									
+									<h3 id="nesciens">2: Nesciens mater - Jean Mouton (c. 1455 - 1522)</h3>
+									<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+									<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+									The second work on this disc is also a Christmas piece, setting the text of Matins responsory sung during the Octave of Christmas, the eight days following 25 December. It is now probably Mouton's most famous work, and a piece I believe exhibits perfectly the magic of a particular kind of Renaissance compositional style. Those of you who know this piece will understand to what I refer and I will describe it below.
+									<div class="translation-wrapper">
+										<div class="foreign">
+											<div class="translation-border">
+													Nesciens mater virgo virum<br>
+													peperit sine dolore<br>
+													salvatorem saeculorum.<br>
+													Ipsum regem angelorum<br>
+													sola virgo lactabat,<br>
+													ubere de caelo pleno.
+											</div>
+										</div>
+										<div class="english">
+											<div class="translation-border">
+													Knowing no man, the Virgin mother<br>
+													bore, without pain,<br>
+													the Saviour of the world.<br>
+													Him, the king of angels,<br>
+													only the Virgin suckled,<br>
+													breasts filled by heaven.
+											</div>
+										</div>
+									</div>		
+									<div style="clear:both; display:block;"></div>
+									Charting a historical narrative, however loosely, in a concert programme or CD recording is always a tempting organisational scaffold and I admit to it here, albeit it very simply. Renaissance music is, of course, not 'one thing'. When comparing what we think of as 'Renaissance' music with what we think of as 'Classical' or even 'Romantic' music, it becomes very clear very quickly what a blunt instrument the term 'Renaissance' actually is. Renaissance music for us spans more than a century of musical, cultural, and societal change. It covers music written by composers very limited in their ability to communicate and travel, even though they were very often members of the cosmopolitan and educated classes. Much ink has been spilled about the existence of a common 'European' identity during this more-than-century and in music the arguments for and against this are as complex as in any other field. However, there are some basics upon which we can agree. The earliest composers we think of as belonging to the 'Renaissance' began writing in a different, new style in the last few decades of the 15th century. Chief among these pioneers was Josquin des Prez, who acts now as a standard bearer for the first 'school' of this new style, the Franco-Flemish composers. We often think of the Flemish part of 'Franco-Flemish', but Jean Mouton, a leading light of this group, spent the entirety of his early musical life in what is now north-eastern France, in the Burgundian regions of Picardy, Artois, and Boulogne, gaining in experience and fame until he was briefly employed in Grenoble, far away from his northern French roots. This didn't last long, and a visit there by Queen Anne of Brittany, wife of King Louis XII of France, in 1502 (after Mouton had been in Grenoble for less than a year) likely tempted him into her service. This, Mouton's 'big break', was toward the end of his life, however, when he was in his early 40s. From then on, he remained in royal employment at the French court in Paris until his death in 1522, becoming de facto court composer, though no such official position existed and he was never appointed <i>ma&icirc;tre de chapelle</i>.<br><br>
+									Mouton, therefore, with Josquin, are the two earliest composers we feature on this recording. <i>Nesciens mater</i> is an example of a compositional style that is often associated with these early, northern-European polyphonists - the use of complex (sometimes described as 'mathematical') compositional games or rules or, to use their Latin title, 'canons'. <i>Nesciens mater</i> is <b>full</b> of canons! It is an entirely canonic piece, in fact, an eight-voice work, only four voices of which are explicitly written out. Each of these four is to be sung in canon at the fifth as well, thereby making this entire work a strict 'eight in four' canon. Josquin is well known for his use of these compositional games, and there are many different kinds, but his writing is characterised by a laser-like clarity, a simplicity, and a sparseness. The machines he creates are wonderous, but transparent and clear. Mouton's contrapuntal wizardry, very much in contrast, is hid from view. His textures are much more stable and his sonorities richer and more generous. In <i>Nesciens mater</i> in particular, he creates a logic in how the piece flows, how it breathes, that is not specificially related to the canons themselves. There is indeed variation of texture here, but used sparingly and to great effect, and in the same ways one would find it in an utterly normal, non-canonic piece of imitative counterpoint.<br><br>
+									This is one of my very favourite pieces of music, not just from the Renaissance. There is warmth here, intimacy, and comfort. I might be so bold as to say this is a maternal piece of music if you will permit such romantic language. It nevertheless has a shape and a progression. There is real passion here as well. Especially toward the end of the text, a striking contrast is drawn between the very large and powerful and the very intimate and tender, one which appears often in Marian and Christmas texts. We marvel that the 'Salvatorem saeculorum' (Saviour of the world or of the ages) and 'Regem angelorum' (King of angels) would suckle at the breast of a virgin. The piece, likewise, slowly and comfortingly oscilates between grand swells of expansive, generous power and tender, delicate, nurturing embraces. What a masterpiece.<br><br>
+									
+									<h3 id="nunc">3: Nunc dimittis - Josquin des Prez (c. 1450-55 - 1521)</h3>
+									<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+									<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+									Before moving very quickly to music written almost half a century later, we present as our third piece in this collection Josquin des Prez' setting of the <i>Nunc dimittis</i>, the canticle sung daily at Compline. Any disc attempting to represent Renaissance music broadly would have to include music by Josquin, undoubtedly the most famous forefather of all Renaissance composers.
+									<div class="translation-wrapper">
+										<div class="foreign">
+											<div class="translation-border">
+													Nunc dimittis servum tuum, Domine,<br>
+													secundum verbum tuum in pace:<br>
+													Quia viderunt oculi mei<br>
+													salutare tuum<br>
+													Quod parasti<br>
+													ante faciem omnium populorum:<br>
+													Lumen ad revelationem gentium,<br>
+													et gloriam plebis tuae Israel.<br>
+													Gloria Patri, et Filio,<br>
+													et Spiritui Sancto.
+											</div>
+										</div>
+										<div class="english">
+											<div class="translation-border">
+													Lord, now lettest thou thy servant depart,<br>
+													according to thy word, in peace.<br>
+													For mine eyes have seen<br>
+													thy salvation,<br>
+													Which thou hast prepared<br>
+													before the face of all people;<br>
+													To be a light to lighten the Gentiles:<br>
+													and to be the glory of thy people Israel.<br>
+													Glory be to the Father, and to the Son,<br>
+													and to the Holy Ghost.
+											</div>
+										</div>
+									</div>	
+									<div style="clear:both; display:block;"></div>
+									It is difficult to overstate Josquin's importance in the history of music. Although this practice was popular at the time, he is the only composer I can think of to be most often referred to now merely by his first name! Almost a direct contemporary of Mouton's, Josquin was most likely born in the Hainault region of modern-day northern French and southern Belgium, though his precise family history is unclear. In a similar way to Mouton, though much earlier in his career, Josquin first major appointment was a brief spell in the south of France, at the court of Ren&eacute;, Duke of Anjou in Aix-en-Provence. Josquin likely benefited from an automatic promotion when Ren&eacute; died in 1481, as all of the duke's singers were transferred to the court of Louis XI and placed in the Ste Chapelle in Paris. There is evidence that Josquin returned to the area of his birth briefly before taking advantage of the fact that his fame had already spread to Italy by taking up employment with Cardinal Ascanio Sforza in Milan. In 1489, now in his late 30s, Josquin moved from Milan to join the papal chapel in Rome, first under Innocent VIII and then under the Borgia pope Alexander VI. While his precise movements over the following decade are unclear, there is tantalising evidence that he was employed by Louis XII of France at the same time as Mouton, around the turn of the 16th century, meaning they would have been daily colleagues. This wasn't to last long, as Josquin went back to Italy to work for Ercole d'Este, Duke of Ferrara for a brief time in 1503 before taking a 'retirement position' (now as a certified musical celebrity with a wildly impressive CV) as provost of the collegiate church of Notre Dame in Cond&eacute;-sur-l'Escaut, within a few dozen miles of where he grew up. This was to be where Josquin would stay for the remainder of his life.<br><br>
+									Josquin's output is vast for his time. His fame was equally great, benefiting from but also contributing to the success of the brand new medium of printed music books. Ottaviano Petrucci, the first person to print polyphonic music (the technique for which he claimed to have invented), chose as his third publication a collection of Josquin's masses, the first ever single-composer music print. Josquin's contacts in the French royal court and the Vatican, as well as the ducal chapels at Milan and Ferrara and his head-of-house position at Cond&eacute; meant that by the end of his life, in the second decade of the 16th century, Josquin would have been a wealthy and comfortable member of the clerical upper middle class. He is regularly mentioned in poetry and letters as one of the great musicians of his day and printed collections of his works were regularly produced and sold throughout the 16th-century all over Europe.<br><br>
+									Josquin's <i>Nunc dimittis</i> highlights the hallmarks of his style and contrasts wonderfully with Mouton's work. For four voices only, Josquin's piece bristles with the sort of restrained energy, intrigue, incision, and clarity that he is known for, often with textures reduces to their bare minimum of duets or trios, and all of the sections very clearly delineated. Despite this, I find there is room for brief passages of a calmer, more comfortable beauty in this piece, especially at the very end when Josquin repeats the opening phrase of text, suggesting this piece was meant more as a multi-purpose motet than a strictly liturgical work. This piece, in a stark contrast to Mouton's <i>Nesciens mater</i>, is immediately graspable in its inner workings - indeed, it is this glimpse 'inside' the counterpoint that is incredibly exciting and satisfying.<br><br>
+									
+									<h3 id="noel">4: Noel, adieu thou court's delight - Thomas Weelkes (1576 - 1623)</h3>
+									<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+									<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+									In an abrupt change, the fourth track on this CD is in English, sets a secular text, and was written by a man born more than a century after Josquin! This may seem a bit of an extreme juxtoposition, and I believe the level of contrast in the music does indeed reflect these wide separations of time, geography, and subject matter. This contrast, however, serves as a reminder, if perhaps a forceful one, of the breadth of 'Renaissance' style I mentioned above.
+									<div class="translation-wrapper">
+										<div class="english-only">
+											<div class="translation-border">
+												Noel adieu, adieu thou Court’s delight,<br>
+												Upon whose locks the graces sweetly played;<br>
+												Now thou art dead, our pleasure dies outright,<br>
+												For who can joy when thou in dust art laid?<br>
+												Bedew, my notes, his deathbed with your tears;<br>
+												Time helps some grief, no time your grief outwears.
+											</div>
+										</div>
+									</div>
+									<div style="clear:both; display:block;"></div>
+									Thomas Weelkes features regularly on most English cathedral choir music lists. His centrality in that recent tradition in particular perhaps blurs the fact that during his lifetime he didn't enjoy the heights of fame or establishment acceptance of his contemporaries Orlando Gibbons and Thomas Tomkins. Weelkes possesed a precocious talent as a youngster, publishing his first book of madrigals in his very early 20s and being appointed organist at Winchester College soon thereafter. While there he published two more madrigal books, the second of which contains <i>Noel, adieu thou court's delight</i>, and contributed his famous <i>As Vesta was from Latmos hill descending</i> to Thomas Morley's 1601 'Triumphs of Oriana' publication - all before his 25th birthday. A cathedral appointment was surely due and came quickly, as orgnanist and <i>informator choristarum</i> at Chichester in 1602. He settled into this regular round of music making, got married, and received a BMus degree from New College, Oxford. All was not to remain as promising for long. Over the following 15 years at Chichester, Weelkes was reprimanded with increasing regularity for various offenses ranging from willful absence and dereliction of duty to public drunkenness and even releaving himself from the organ loft onto the Dean of Chichester sitting below. He was described to the bishop as 'a notorious swearer and blasphemer' and, once he was sacked from his job as organist and master of the choristers, would still regularly arrive drunk to sing in the choir 'both cursing and swearing most dreadfully'. By this time he had ceased to publish music of any kind and his service to the cathedral was becoming erratic. He died in 1623, in London, with little public reputation or recognition.<br><br>
+									The 'Noel' referred to in the title of this madrigal was Henry Noel, a courtier and member of parliament in Elizabethan London. He is now more famous in musical circles, through his association with Weelkes, Thomas Morley, and John Dowland, than he ever has been as a diplomat, statesman, or political agent. He was the second son of a Leicestershire minor noble family and was a member of Sir Walter Raleigh's circle in the late 1570s when both men had yet to find fame and were on the margins of court, seeking attention and favour. Noel appears to have been much less successful than Raleigh and had continual problems with debt and brushes with the law for various violent offenses throughout his life. He was a keen musician, however, and a Catholic sympathiser, which may explain his association with both Morley and Dowland. Dowland wrote an exquisite set of psalm settings for Noel's funeral in 1597 entitled <i>Lamentatio Henrici Noel</i> and Morley too wrote a lament (strangely titled <i>Harke; Alleluia</i>) as 'a reverend memorial of that honourable true gentleman Henry Noel Esquire.'<br><br>
+									I believe some of Weelkes' music is distinctly pedestrian. It doesn't surprise me that he is chiefly remembered as a promising young madrigalist who then behaved incredibly badly as his provincial cathedral life wore on. I do submit, however, that there is true genius in some of his output and this piece is an incredible achievement. Present here is the characteristically pictorial treatment of text which I believe sometimes blots the music of his English contemporaries in their laboured efforts to emulate the Italian style, but here Weelkes judges it perfectly, organising his abrupt, alternating gestures of rhythm and mood into one long crescendo of increasing tension, lighter passages only briefly punctuating languid, ceaselessly dissonant, chains of exquisite musical pain. Indeed, even written out silences are used in this madrigal to great effect, and especially toward the end as a device to propel the music forward as opposed to delineate sections. His inventiveness and contrapuntal mastery are all very much on display here and that this is the work of someone in his early twenties is truly remarkable. It is perhaps interesting to note that the edition we used in making this recording contained no barlines. It is our hope that the linear, horizontal stretch of these phrases was aided by this visual reminder.<br><br>
+									
+									<h3 id="salutaris">5: O salutaris hostia a6 - William Byrd (c. 1540 - 1623)</h3>
+									<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+									<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+									It is difficult for a choir steeped in the English choral tradition of cathedral and collegiate chapel choir music making not to have a natural affinity with English polyphony. We are no different and regularly perform a wide range of 16th-century English music, including much by William Byrd. As so much of his music is so widely performed and recorded, we thought we might take the opportunity of preparing this disc to record a piece of Byrd that is truly unique and lies well outside what is normally classed as Byrd's 'style'.
+									<div class="translation-wrapper">
+										<div class="foreign">
+											<div class="translation-border">
+												O salutaris hostia<br>
+												quae caeli pandis ostium,<br>
+												bella premunt hostilia:<br>
+												da robur, fer auxilium
+											</div>
+										</div>
+										<div class="english">
+											<div class="translation-border">
+												O saving victim<br>
+												who opens the gate of heaven,<br>
+												hostile wars press on us:<br>
+												give strength, bring aid.
+											</div>
+										</div>
+									</div>	
+									<div style="clear:both; display:block;"></div>
+									William Byrd and Thomas Tallis are by a considerable margin the two most well known of the English polyphonists. Much is known now of Byrd's biography and I would encourage the reader to either get a brief precis from reading a <a href="https://en.wikipedia.org/wiki/William_Byrd" target='_blank'>Wikipedia article</a> or two or consult one of the many excellent accompanying notes to various discs of Byrd's music, perhaps starting with the many recordings made by The Cardinall's Musick. Byrd was equally famous in his own day, known and recognised as a leading musical figure in England at the end of the 16th century, a Gentleman of the Chapel Royal, a prot&eacute;g&eacute;, friend, business partner, and legal beneficiary of Thomas Tallis, a favourite of Elizabeth I, and very much an establishment success story in the way Thomas Weelkes wasn't. At the very same time, Byrd's firmly held Catholic beliefs put him always at odds with the Elizabethan political order. There is little I can say here that will further enliven the debate about what it must have been like to be a famous, well-respected, successful, and prolific - but ultimately still 'dangerous' - recusant Catholic musician in Elizabethan and Jacobean England.<br><br>
+									Personally, the oft-repeated (and perhaps now tired?) narratives regarding Byrd's recusancy were never what drew me to his music. I have always been struck by how his biography seems often to be used as a tool to make his music appear more intriguing, sexy, or audacious. While there is much in his output that can indeed be described using these words, I find it always more fruitful to look at the music itself and develop a relationship with it on its own terms. One of the most identifiable traits of Byrd's style, though it evolved considerably over his lifetime, has long been for me a sense of musical confidence and ease. There is a competance, a technical mastery that Byrd exhibits in his work that seems particularly English - an effortlessness, smoothness, and sweetness. This is often breathtakingly beautiful and serene but can be equally well applied to deeply felt and meaningfully expressed emotions as it can to 'merely pleasing sounds'. Byrd's many penitential motets are among some of the most moving works of music I know. I submit, however, that in virtually all of his music there is a sense of accomplishment, an aesthetic of class and quality.<br><br>
+									His <i>O salutaris</i> for six voices is one of the rare works where this certainly is <b>not</b> the case! This is precisely why I love it. While academic consensus is not complete on the issue, it is widely believed that his six-voice <i>O salutaris</i> setting is one of the first pieces of music Byrd wrote, either as a teenager or in his very early twenties, perhaps as a technical exercise. Though Byrd published the vast majority of his output throughout his life, this work is only contained in mansucript sources. It is a canonic work; three of the six voices follow one another strictly and the rest are freely composed. One need only hear this piece once to grasp how it stands outside what we have come to expect from Byrd's stylish, polished, and poised counterpoint. This music is extreme! While English ears have become accustomed to some pretty jarring dissonance, known as 'false relations', the level to which this piece tears itself apart at the seams is, in my experience, unmatched - perhaps with good reason. The fascinating thing about this is not that Byrd 'made mistakes' when composing this music, but he in fact appears to have purposefully given himself problems to solve. Putting aside for a moment the freely composed voices, the very second phrase of the canonic melody clashes with the first phrase, both immediately as it enters in the leading voice (while the following voices are still on the first phrase), but also toward its end, as the following voices enter - that single, short phrase clashes with itself! This is true of the third phrase as well, and in various ways, all the rest of the phrases in the canonic melody. Byrd wrote these clashes into the fabric of this music as a first step - and then proceeded to write three other freely composed voices which clash even more! I find it very hard to believe he didn't know what he was doing, as the 'mistakes' are so blatant, numerous, and happen at such a foundational level in the structure of the music. In my estimation, it makes sense as indeed a cheeky experiment, a youthful challenge to himself, or perhaps as a method of showing off just how audacious he could be. While I don't think this music says much that is profound about the human condition (whereas some of Byrd's other works certainly do!), I love this piece for its strangeness, for its humour, for taking us to the limit of what we think English polyphony might sound like, and, in its own way, for its display of contrapuntal mastery, if only in picking up the pieces of something it itself broke!<br><br>									
+									
+									<h3 id="chiotami">6: Ch'io t'ami e t'ami pi&ugrave; de la mia vita - Claudio Monteverdi (1567 - 1643)</h3>
+									<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+									<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+									In the unfolding task of exhibiting the breadth of our repertoire in this CD recording programme, we have covered two of the most common, conventional areas or repertoire themes encountered by any group interested in the Renaissnce - Franco-Flemish and English polyphony. The Italian madrigal, however, as a genre, is every bit as central to the story of music history as the Franco-Flemish flowering of the early 16th century and the expressive experiments undertaken by its champion, Claudio Monteverdi, are the equal of any other outpouring of emotion in music, English or otherwise.
+									<div class="translation-wrapper">
+										<div class="foreign">
+											<div class="translation-border">
+												Ch’io t’ami e t’ami più de la mia vita,<br>
+												se tu no’l sai, crudele,<br>
+												chiedilo a queste selve,<br>
+												che tel diranno<br>
+												e tel diran con esse<br>
+												le fere lor’e i duri sterpi e i sassi<br>
+												di quest’alpestri monti,<br>
+												ch’i’ho sì spesse volte<br>
+												intenerito al suon de’miei lamenti.<br><br>
+												Deh! bella e cara e sì soave un tempo<br>
+												cagion del viver mio, mentre al ciel piacque,<br>
+												volgi una volta,... volgi<br>
+												quelle stelle amorose,<br>
+												come le vidi mai, così tranquille<br>
+												e piene di pietà, prima ch’io moia,<br>
+												che’l morir mi sia dolce,<br>
+												e dritt’è ben che, se mi furo un tempo<br>
+												dolci segni di vita, or sien di morte<br>
+												quei begl’occhi amorosi;<br>
+												e quel soave sguardo,<br>
+												che mi scorse ad amare,<br>
+												mi scorg’anco a morire;<br>
+												e chi fu l’alba mia,<br>
+												del mio cadente dì l’Espero or sia.<br><br>
+												Ma tu, più che mai dura,<br>
+												favilla di pietà non senti ancora;<br>
+												anzi t’inaspri più, quanto più prego.<br>
+												Così senza parlar dunque m’ascolti?<br>
+												A chi parlo, infelice? A un muto sasso?<br>
+												S’altro non mi vuoi dir, dimmi almen: “Mori!”<br>
+												e morir mi vedrai.<br>
+												Questa è ben, empi’Amor, miseria estrema,<br>
+												che sì rigida ninfa<br>
+												non mi risponda, e l’armi<br>
+												d’una sola sdegnosa e cruda voce<br>
+												sdegni di proferire al mio morire.
+											</div>
+										</div>
+										<div class="english">
+											<div class="translation-border">
+												I love you and love you more than my life.<br>
+												If you do not know it, cruel one,<br>
+												ask these woods,<br>
+												who will tell you,<br>
+												and so will the wild beasts,<br>
+												the rough scrub and the stones<br>
+												of these alpine mountains,<br>
+												which I so many times<br>
+												have softened with the sound of my lamenting.<br><br>
+												Ah, my beauty, my dear one and once my so sweet<br>
+												reason for living, while it pleased heaven;<br>
+												turn once more,... O turn<br>
+												those loving eyes on me,<br>
+												as you used to, so calm<br>
+												and full of pity, before I die,<br>
+												so that my dying be made sweet.<br>
+												And it is right that as once<br>
+												I read life, now I should read death<br>
+												in those beautiful eyes,<br>
+												and that the sweet glance<br>
+												that witnessed my love<br>
+												should now witness my death;<br>
+												and that she who was my dawn,<br>
+												should of my fading day now be the Evening Star.<br><br>
+												But you, more harsh than ever,<br>
+												not a spark of pity do you now feel;<br>
+												rather thy harshness increases the more I plead.<br>
+												Have you no word to answer me?<br>
+												To whom do I speak, unhappy one? A dumb stone?<br>
+												If you wish to say nothing else, at least say , ‘Die!’<br>
+												and you will see me die.<br>
+												This, O villainous love, is the extreme of wickedness,<br>
+												that such an unyielding girl<br>
+												answers me not, and you arm her<br>
+												with only scornful, cruel words,<br>
+												yet scorn to pronounce my death.
+											</div>
+										</div>
+									</div>
+									<div style="clear:both; display:block;"></div>
+									Claudio Monteverdi is yet another giant figure in the history of music. So far, this CD programme has only contained music by two others whose influence could even possibly be construed as similar to his, and it is really only Josquin who is his equal, Byrd's music not being revolutionary as much as just exceptionally good. Many now look to Monteverdi as the 'father of modern music'. In the narratives surrounding the transition from 'Renaissance' to 'Baroque' in music, Monteverdi is without a doubt the leading figure. Leaving aside the fact that these narratives are often simplistic, in Monteverdi's own use of the phrase 'seconda pratica' to differentiate what he was doing from a 'prima pratica' he identified, he self-consciously and undeniably asserted that he was trying to take music forward, find a new way. This 'new way' was to become, centuries later, our default and unquestioned understanding of how music works - what it's for - and it laid the foundations for opera and programmatic orchestral music. Monteverdi's 'seconda pratica' is about how music relates to words, and crucially that the words should be 'mistress' of the harmony - or more broadly, that the abstract musical gestures composers use (notes, rhythms, harmonies, compositional structures) should be conceived of as 'serving' a text or an idea or an emotion. Monteverdi's thinking leads very logically to the idea of 'affect', a central concept in the Baroque conception of music, that it should literally excite identifiable and specific emotions within those listening to it. Music was not something to be understood or appreciated only, but something primarily existing to cause a change in the listener's <b>emotional</b> state.<br><br>
+									Monteverdi was born in Cremona, the son of a doctor. His talent was obvious very early; he published his first collection of music in Venice when he was 15 years old. While no record survives of his being a chorister at Cremona cathedral, his teacher Marc'Antonio Ingegneri was <i>maestro di cappella</i> there. His first major musical position was among the court musicians of Vincenzo I Gonzaga, Duke of Mantua, which he took up in 1591. His boss there was Giaches de Wert, a giant of late 16th-century madrigal composition and another formative influence on Monteverdi. In Mantua, Monteverdi's career began to pick up speed. He published five madrigal books while there, and was eventually promoted to the top job in the duke's musical establishment in 1601. His first opera <i>Orfeo</i> received its premier in Mantua in 1607 but very quickly after this Monteverdi's wife fell ill and Monteverdi left court to attend to her in Cremona. Her death in September of that year was a blow for Monteverdi. From this point on, Monteverdi's relationship with his Mantuan masters seems to have taken a turn for the worse and after numerous attempts to resign and some hidden attempts to gain favour elsewhere in Italy, he was dismissed by the new duke, Francesco, in July 1612. A very famous man at this point, he didn't need to wait long back in Cremona for a new opportunity and in August of 1613, he applied for and was appointed <i>maestra di cappella</i> at likely the most famous church in northern Italy, the Basilica di San Marco in Venice. Monteverdi spent the final 30 years of his life in Venice working at San Marco but was also very active in opera and other musical activities in town. He continued to write madrigals, sacred music, operas, and incidental music for various dramatic and court occasions, as well as taught singing, brought up his children (one of whom also was a musician, despite Monteverdi's attempts to force him to study law), and became an ordained priest. His death came shortly after the completion of his last work, his great opera <i>L'incoronazione di Poppea</i>, in 1643.<br><br>
+									<i>Ch'io t'ami</i> was published in 1605, in his fifth book of madrigals, when Monteverdi was still employed at Mantua and during a time of incredible creative output for Monteverdi. It was in the preface to this book that Monteverdi first uttered in print the phrase 'seconda pratica', as a defense against an attack on his (and others') unconventional use of dissonance, tonal coherence and organisation, and other compositional devices which had begun some years earlier by the conservative music theorist Giovanni Maria Artusi. This 'controversy' is now famous among undergraduate music students the world over, but sometimes the music itself is secondary to the theoretical arguments. This book contains other famous madrigals such as <i>Cruda Amarilli</i>, <i>Era l'anima mia</i>, and <i>Questi vaghi concenti</i> but I believe <i>Ch'io t'ami</i> is a truly special achievement. The text comes from <i>Il pastor fido</i> a very famous play by Giambattista Guarini, who Monteverdi knew. Published as three separate madrigals in the 1605 print, it is nonetheless a triumph of large-scale, sectional organisation and dramatic progression and shows off perfectly all the sorts of new ideas that might have made Artusi so upset. There is pictorial representation of the text in places, as an homage to the mid-century practices of Monteverdi's youth and his first boss, de Wert. Monteverdi's characteristically risky and modern treatment of dissonance also appears. There are repeated lengthy passages of homophonic text declamation, something Monteverdi also pioneered, offering the performers and their listeners access to the dramatic and emotional core of the text itself, stripped to an absolute minimum of contrapuntal distraction. More importantly, however, there is an undeniable sense of emotional authenticity, passion, and almost urgency in this music. Monteverdi <b>needs</b> you to understand and feel this music. The single character in this drama (many of Monteverdi's great madrigals are actually best conceived as mini opera scenes) is thrown violently from one state of intense, internal experience to another: pleading, anger, remorse, nostalgia, desperation, resignation, as though his life depends upon it. The final section, from 'Questa è ben, empi’Amor, miseria estrema' (This O villainous love, is the extreme of wickedness) to the end, is, I believe, an absolute masterstroke. Reading the text itself, one might expect Monteverdi to engage in crashing dissonance, fast rhythms, accusatory gestures. He knows, however, that this text comes at the end of an emotional roller coaster ride for his character, one that he has also just subjected his audience to. For me, Monteverdi here is expressing the strange (and for outsiders, very poignant) feeling at the end of brutal argument between lovers, when they both realise it can't go on - this really is the end of their relationship and all the moments of ecstacy, agony, comfort, pain, and everything in between it has brought with it. Especially if one still loves the other, all of a sudden, the anger, spite, and vitriol are overcome by sadness and - in fact - a warmth, or a memory of safety and succour. The battle has been so intense and the loss so great that all that is left is a memory of togetherness that can now never be relived. The piece doesn't shout its way to a conclusion; there are no slammed doors and dramatic exists. This, then, is <b>real</b> emotional loss, truly felt and meaningfully understood, expressed in notes, rhythms, and text on a page of music. In short, a total miracle.<br><br>
+									
+									<h3 id="requiem">7: Missa pro defunctis a6: Introitus & Kyrie - Duarte Lobo (c. 1564-9 - 1646)</h3>
+									<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+									<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+									From the centre of cultural innovation in the first part of 17th-century (Mantua, Venice and composers like Monteverdi, poets like Guarini, great patrons such as the Gonzaga dukes, etc) we take a brief sojourn into what might be called the cultural countryside. Portugal in the early 17th-century was in many obvious ways 'marginal' in a European context. Though there are certainly ways of challenging this narrative (and some of my yet-to-be-completed doctoral research was an attempt at such a challenge), it would be difficult to find a greater contrast between two genres of 17-century music: a Monteverdi madrigal and a Requiem mass setting by Duarte Lobo.
+									<div class="translation-wrapper">
+										<div class="foreign">
+											<div class="translation-border">
+												Requiem aeternam dona eis, Domine.<br>
+												Et lux perpetua luceat eis.<br>
+												Te decet hymnus, Deus, in Sion,<br>
+												Et tibi reddetur votum in Jerusalem<br>
+												Exaudi orationem meam<br>
+												Ad te omnis caro veniet.<br><br>
+												Kyrie eleison.<br>
+												Christe eleison.<br>
+												Kyrie eleison.
+											</div>
+										</div>
+										<div class="english">
+											<div class="translation-border">
+												Eternal rest give unto them, O Lord<br>
+												And let perpetual light shine upon them<br>
+												A hymn, O God, becometh Thee in Zion<br>
+												And a vow shall be paid to thee in Jerusalem<br>
+												Hear my prayer<br>
+												All flesh shall come before you.<br><br>
+												Lord, have mercy.<br>
+												Christ, have mercy.<br>
+												Lord, have mercy.
+											</div>
+										</div>
+									</div>
+									<div style="clear:both; display:block;"></div>
+									Very little is known of Lobo's biography. He was born in the late 1560s and was a chorister at the Cathedral in &Eacute;vora, a small town about 70 miles east of Lisbon. His association with this institution is to be noted, as it is now regarded as the centre of a long and fruitful tradition of Portuguese musical education in the 16th and 17th centuries. The Portuguese 'Golden Age' of polyphonic composition was just coming into its own when Lobo arrived and he would eventually go on to be its foremost representative. His teacher there was Manuel Mendes, who is now primarily known as the man who, in around 1580 or so, would have had three exceptionally talented young boys in his care at &Eacute;vora, all roughly the same age: Duarte Lobo, Manuel Cardoso, and Filipe de Magalh&atilde;es. These three men would all go on to achieve a level of renown not enjoyed by many Portuguese composers before them and few after. This fame was not great by Monteverdi or Josquin's standards. I mean chiefly that they were able to print their works and Duarte Lobo in particular was able to have his works published internationally, at Jan Moretus' very prestigious Plantin house in Antwerp.<br><br>
+									After his studies as a boy and adolescent, Lobo left &Eacute;vora to briefly take up a position as <i>maestro de capilla</i> at the Hospital Real in Lisbon until, in about 1591, he was appointed <i>maestro</i> at Lisbon Cathedral. He would remain employed there for almost 50 years.<br><br>
+									Portugal during Lobo's lifetime was united with the rest of Iberia under the rule of the Spanish Hapsburg kings, beginning with Philip II in 1580 and lasting for 60 years. 1580 was around the time that Magalh&atilde;es arrived at &Eacute;vora; and the three musical boy geniuses would have been more interested in their counterpoint homework than the fact that Portugal was losing its independance. However, this political change was indicative of the fact that the glorious days of Portuguese world dominance and empire from about a century earlier were very much in decline. This had an impact on the musical education Lobo received and subsequently on his musical influences and on his style. When you hear these two movements from his Requiem, I'm sure you are reminded of the work of Tom&aacute;s Luis de Victoria and his famous 6-voice Requiem mass of 1605. Other composers such as Palestrina or maybe even the earlier Spanish composers Guerrero or Morales perhaps come to mind. It might be surprising, therefore, to discover that this mass was published in 1639, when Monteverdi was in Venice sitting down to start work on <i>Poppea</i>. It is striking to realise that Duarte Lobo and Claudio Monteverdi could very well have been direct contemporaries. This 'conservatism' in the wonderful polyphony produced in Portugal in the first half of the 17th century has been identified and written about rather a lot, and there are some pedagogical and philosophical theories as to why this happened, but it is remarkable nonetheless.<br><br>
+									My response to this music when I first heard it as a teenager growing up in Canada was immediate and intense. While I didn't have a hugely sophisticated understanding of the topography of the Renaissance polyphonic landscape, I could sense something in it that wasn't quite the same as Palestrina or Victoria. There was something else, a spice, an inventiveness, even a harmonic richness or expansiveness. I'm convinced, and some of my doctoral work could be construed as providing evidence for this, that there <b>was</b> some foreign, very up-to-date music filtering into Portuguese musical life as the huge changes that brought about the Baroque were taking place elsewhere and that this music was studied, if not imitated or fully assimilated. While harmonic exploration is more obvious in the work of Manuel Cardoso, it is present in Lobo's style, as are more emotive responses to the text, uses of different textures in a more overtly dramatic style, and other hints at Baroque thinking. This music is definitely <b>not </b> what I would call 'Baroque', but there is something in it that hints at a more lavish approach Victoria would have used. Musical style is an incredibly slippery concept, but this unique, enigmatic flavour in Portuguese polyphony has captivated me now for many years. Of the three famous composers, I always return to Duarte Lobo as I feel there is a depth of musical understanding and a wisdom about his music that Cardoso's fireworks can't replace. This Requiem mass, and these two movements in particular, contain moments of utterly exquisite beauty I think are not matched anywhere, by anyone. This is almost the logical extreme of what Renaissance polyphony can be - poised, calm, powerful, masterfully conceived but simple, utterly moving, and inexplicably beautiful.<br><br>
+									
+									<h3 id="musica">8: Musica dei donum - Orlande de Lassus (c. 1530-32 - 1594)</h3>
+									<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+									<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+									If Josquin 'began' the Renaissance polyphonic era, Monteverdi 'ended' it, and Byrd perfected it (for the English, at least!) what else is there? There is Lassus! By far the most prolific of polyphonists, Lassus sprang from the Flemish tradition, but conquered everything he touched. Lassus defied categorisation and adapted himself to any musical situation. He wrote in four languages (or five if you believe his own claim to have set Dutch texts, none of which survives), every possible liturgical genre you can imagine, and a huge amount of secular music (including many rather bawdy chansons). His was an active, irrepressible musical mind.
+									<div class="translation-wrapper">
+										<div class="foreign">
+											<div class="translation-border">
+												Musica Dei donum optimi<br>
+												trahit homines, trahit deos:<br>
+												Musica truces mollit animos<br>
+												tristesque mentes erigit.<br>
+												Musica vel ipsas arbores<br>
+												et horridas movet feras.
+											</div>
+										</div>
+										<div class="english">
+											<div class="translation-border">
+												Music, the gift of the supreme god,<br>
+												draws men, draws gods:<br>
+												Music makes savage souls gentle<br>
+												and uplifts sad minds.<br>
+												Music moves the trees themselves<br>
+												and wild beasts.
+											</div>
+										</div>
+									</div>
+									<div style="clear:both; display:block;"></div>
+									There is a story about Lassus as a boy that his voice was so beautiful he was abducted from his church choir three times. There doesn't appear to be any evidence for this. Howvever, we know he left his birthplace of Mons in Hainault, which is approximately 30 kilometers away from Cond&eacute;-sur-l'Escaut where Josquin had died about 10 years ealier, in 1545 (aged 13) in the service of a minor noble in the Mantuan court, Ferrante Gonzaga. With him he traveled to Mantua, Palermo, and Milan. More employment followed in Naples and Rome, where he was appointed <i>maestro di cappella</i> at San Giovanni in Laterano, one of the four most prestigious churches in that city, in his very early 20s. Perhaps this was too early for such a major appointment and he left Rome about a year later to return to his native Low Countries. He spent a few years in Antwerp, including working with the well known music printer Tylman Susato, who produced Lassus' first publication in 1555 and would later print a large amount of his work. Lassus made his final move a year later, joining the chapel establishment of Duke Albrecht V of Bavaria in Munich. He began as a tenor and was promoted to <i>kapellmeister</i> in 1563. After having spent so much of his early life travelling, he had evidently had enough and was very happy in Munich, as he stayed employed in the Munich Wittelsbach court until his death more than 30 years later.<br><br>
+									It is perhaps remarkable that Europe's most famous musician, which is what he would become, would choose to stay in Munich, north of the Alps. He traveled at the behest of his employers but never seriously considered leaving permanently, despite offers from Dresden and even perhaps the French royal court in Paris. Both Andrea and later Giovanni Gabrieli traveled to Munich and spent time with him, and he developed close friendships with Albrecht, the duke himself as well as his successor Wilhelm. Toward the end of his life, he was afflicted with a 'melancholia hypocondriaca' and I believe some of his most wonderful music comes from his later years. <i>Musica dei donum</i> is contained in his last motet publication, entitled <i>Cantiones sacrae sex vocum</i> (Sacred songs for six voices) and appeared in 1594, the year of his death. The text is anonymous, though had been set by at least Clemens non Papa, Jacob Handl, and Nicolas Rogier some four decades earlier, as those pieces appear in Susato prints from the mid 1550s. As Lassus was with Susato at that time, perhaps this is where he encountered the text. It must have stayed with him, and whenever he composed the work, he saved it for his last public offering. Technically, this isn't a sacred text but instead an ode to music itself and its mysterious, comforting, and restorative powers.<br><br>
+									It is also my favourite piece by Lassus. The text itself sets the scene; it is soft, strange, the imagery vivid, but almost intoxicating. Verbs like 'trahit' (draws or leads or tempts, perhaps?) and 'mollit' (softens, smooths) and movet (moves, but presumably used here both literally and figuretively) conjure this strange world of comforting warmth mixed with mystery and sensuality. The music does precisely the same; it breathes and caresses, swells and recedes, moves one way and then the other. There is a huge amount of technically sophisticated skill on display here for those who wish to look, in how Lassus treats his recurring musical theme setting the word 'musica', but I am drawn in (appropriately) by the endlessly deceptive cadence points and the murky, free, and spontaneous way the piece moves from section to section. Lassus is a master of writing music you can't quite follow while never becoming completely disoriented and this piece imbues that stylistic trope with a sort of melancholy but tender and loving glow. This is music written by an old man thanking music for what it gave him.<br><br>
+									Musicians of course love music about music and perhaps I'm being overly sentimental, but I think music and its power belongs to and affects everyone. Lassus understood that he had a mastery of its techniques but not of its power; he knew how it worked but didn't know why it worked that way. He was able to write this mystery into <i>Musica dei donum</i> in such an insightful but ultimately humble way. I think this piece is one of greatest musical achievements I know.
+									<br><br>
+									
+									<h3 id="suscipe">9: Suscipe quaeso - Thomas Tallis (c. 1505 - 1585)</h3>
+									<span class="backtotop" onclick="javascript:linerScrollToTop();">Back to Table of Contents</span>
+									<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+									The last three pieces on our disc represent for me a process of rounding off and of coming home. A collection of music such as this, which seeks to display the broad range of our capabilities and give you a flavour of what sort of music we have performed over more than a dozen concerts in two years was always in danger of being eclectic, to phrase it generously. For the group, however, these last three pieces really do represent music that is very special for us and progressing toward Tallis to finish, as an English composer, brings us full circle, both in relation to the Sheppard with which the disc begins but also in terms of our natural home in English polyphonic music. Our first concert, in September 2014, featured exclusively English music and we have performed much of it in our concerts.
+									<div class="translation-wrapper">
+										<div class="foreign">
+											<div class="translation-border">
+												Suscipe quaeso Domine<br>
+												vocem confitentis.<br>
+												Scelera mea non defendo;<br>
+												peccavi, Deus miserere mei;<br>
+												peccavi, dele culpas meas gratia tua.<br><br>
+												Si enim iniquitatis recordaberis,<br>
+												quis sustineat?<br>
+												Quis enim justus qui se dicere audeat<br>
+												sine peccato esse?<br>
+												Nullus est enim mundus in conspectu tuo.
+											</div>
+										</div>
+										<div class="english">
+											<div class="translation-border">
+												Accept, I ask, Lord,<br>
+												the voice of one who confesses.<br>
+												My crimes I do not defend;<br>
+												I have sinned, O God have mercy on me;<br>
+												I have sinned, do away my offences by your grace.<br><br>
+												If then you remember iniquities,<br>
+												who could bear it?<br>
+												Who then is so just to dare to say of himself<br>
+												he is without sin?<br>
+												For no one is clean in your sight.
+											</div>
+										</div>
+									</div>
+									<div style="clear:both; display:block;"></div>
+									Another reason to allow Tallis' music the privilege of closing our collection, for me personally, is that he is my favourite English composer. There are many reasons for this, one of which is as a result of his extraordinarily long life and the breadth of English styles he mastered, and in many cases dominated or came to define. Nothing is known of Tallis' birth and the first record we have comes from 1530, indicating that he was employed as organist at Dover Priory, a modest musical establishment. This would have been when Tallis was in his mid 20s. When in his early 30s he was associated with the much more musically active St Mary-at-Hill church in London and in 1538, he took up a position at Waltham Abbey, in Essex. After the Abbey was dissolved, Tallis became one of the first singing men employed at the newly secular Canterbury Cathedral, but it is likely that his association with the Chapel Royal had already begun by this time, perhaps already while he was first in London at St Mary-at-Hill. In 1543, he moved to full-time employment at court and would remain employed by the crown until his death more than 40 years later. By the time William Byrd likely joined the Chapel Royal as a boy chorister (although direct evidence of this is lacking), in the late 1540s, Tallis was already in charge of teaching the boys keyboard and composition and his close friendship with Byrd would last for the rest of his life. Henry VIII was on the throne when Tallis joined the Chapel Royal, and Tallis' central role in the music at court meant he would witness all of the extraordinary political, religious, cultural, and certainly musical upheavals which would follow through the turbulent mid-century at first hand. Because Tallis was already an experienced composer when these began, it is possible virtually to chart the entire English Reformation through his music. Far from struggling under the austerity of the extreme Edwardian musical reforms or showing any rust when Mary again sanctioned the more lavish music of Tallis' youth, or failing to strike the delicate balance required by the Elizabethan Settlement, his genius was ever-present. Tallis excelled on small scales, his famous <i>If ye love me</i> actually being one of my favourite musical miniatures despite its omnipresence, and of course displayed his skill on the grandest of all canvasses, in his 40-voice <i>Spem in alium</i>, an Elizabethan work.<br><br>
+									When Elizabeth ascended the throne in 1558, Tallis was already in his 50s. William Byrd would not rejoin the Chapel Royal until 1572, and the ambitious younger composer, with Tallis, almost immediately petitioned Elizabeth for a greater source of income. In 1573, she granted to Byrd and Tallis jointly an exclusive licence to print and publish music in England and their first (and only) joint venture was produced in 1575, Tallis being a <b>very</b> old man by then, perhaps already in his 70s. This single collection, containing 17 motets each by the two men, one of which is <i>Suscipe quaeso</i>, was the first music book to be printed in England and contains some of the most exquisite work either composer would produce. Interestingly, it contains necessarily youthful works by Byrd, a man keen to make his mark in London, but came at the very end of Tallis' life, nevertheless confirming that the older man's powers were in no way fading. Dating Tallis' compositions is notoriously difficult, but it is speculated that much of the music Tallis published in 1575 was written late in his life, close to the date of publication, and certainly during Elizabeth's reign. Whether <i>Suscipe quaeso</i> itself is one such piece, is unclear. Scholars argue about whether it may have been written for a ceremony conducted in 1554, during Mary's Catholic restoration, in which England was formally absolved of having sinned by leaving Rome. While this interpretation would make sense of Tallis' choice of text, and some structural similarities between <i>Suscipe quaso</i> and Tallis' wonderful <i>Missa Puer natus est nobis</i>, a work definitely composerd for Mary, have also been noted, there exist no manuscript copies of the piece other than ones obviously copied from the 1575 print and there are some stylistic considerations which point to a more sophisticated approach to the text, one more influenced by Byrd's flexibility of texture and structure.<br><br>
+									If I were to enter the debate, I would side with those advocating a later date. There seems to be something about this work that suggests a culmination of his life's work, something final, polished, but full. There is chromaticism reminiscent of <i>In ieiunio</i>. There are moments of constant, full textures of unbelievable intensity such as are found in <i>Videte miraculum</i>. There is heavy use of homophony and the text is very clear to the listener, techniques Tallis began mastering decades earlier. What I find most extraordinary is that he adds new techniques as well, gestures I believe make this piece stand out from his other works. Chief among these is the way in which the piece opens, which always leaves me staggering. There are seven voices in this work and Tallis introduces this thick texture in the most magnificent way. The imitative melody he chooses is long, at 11 semibreves. After a full 30 semibreves have passed in this piece, only four parts have entered. He here decides to bring the final three voices in as a strict canon with the first three, an echo of the very beginning of the work, except that the third of these canonic voices is in fact the second bass part and enters an octave lower. This results in the final voice, the second bass, entering a full 42 semibreves after the work has begun (which is usually notated as 21 bars in modern notation) and the effect is wonderous. The piece here is well and truly underway, with the six freely wheeling voices above suddenly underpinned and supported by this bass entry which articulates the expansive phrase from the very beginning in full. The piece then proceeds to astound the listener at every turn, section by section, until building to an incredible climax to finish. It is a tour de force, an undeniable display of Tallis' total mastery of polyphonic composition and musical expression.<br><br>
+									It is also incredibly fun to sing! This perhaps is the best reason why it is fitting that this work should bring our first CD recording to a close. We are a group who throw ourselves entirely into our music, this music from centuries ago, music we have chosen to specialise in and devote concert after concert to. We believe that the best performances of Renaissance polyphony are those in which the performers themselves commit entirely to the vivid emotional life of these pieces, and express for the audience the joy and meaning we gain from squeezing everything we can out of them. For us, singing polyphony is intense, powerful, urgent, and moving and we look forward to continuing to share these experiences with you.
+								</div>
+							</div>
+							<button class="cd-accordion" id="liner-button-lobo">Notes on 'In Memoriam: Commemoration Motets of the Renaissance'</button>
+                <div class="panel" id="liner-panel-lobo">
+                  <div id="liner-notes-container-lobo">
+                    <center>
+										<h2>The Lacock Scholars</h2>
+										<h3>directed by Greg Skidmore<br><br>In Memoriam: Commemoration Motets of the Renaissance</h3><br>
+										<a style="cursor:pointer; margin-top:1em;" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</a>
+								</center>
+                    <p style="margin-bottom:20px;">
+                      A full desciption of the music on this CD with historical information on the composers will appear here shortly. For now, here is the track listing and some translations.
+                    </p>
+                    
+                    <div id="liner-table-of-contents-lobo">
+									<h3>Table of Contents</h3><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#introitus');">1: Missa pro defunctis a6 - Introitus: Requiem aeternam ... Duarte Lobo (c. 1565-1646)</a><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#kyrie');">2: Missa pro defunctis a6 - Kyrie ... Duarte Lobo</a><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#mort');">3: Mort, tu a navr&eacute; de ton dart (in memoriam Gilles Binchois) ... Johannes Ockeghem (1410/25 - 1497)</a><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#graduale');">4: Missa pro defunctis a6 - Graduale: Requiem aeternam ... Duarte Lobo</a><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#nymphes');">5: Nymphes des bois (La D&eacute;ploration de Johannes Ockeghem) ... Josquin des Prez (1450/55 - 1521)</a><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#sequentia');">6: Missa pro defunctis a6 - Sequentia: Dies irae ... Duarte Lobo</a><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#musae');">7: Musae Jovis (in memoriam Josquin des Prez) ... Nicolas Gombert (c. 1495 - c. 1560)</a><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#offertorium');">8: Missa pro defunctis a6 - Offertorium: Domine Jesu Christe ... Duarte Lobo</a><br>
+									<a class="liner-list" onclick="javascript:linerLoboScroll('#continuo');">9: Continuo lacrimas (in memoriam Jacobus Clemens non Papa) ... Jacobus Vaet (c. 1529 - 1623)</a><br>
+                  <a class="liner-list" onclick="javascript:linerLoboScroll('#sanctus');">10: Missa pro defunctis a6 - Sanctus & Benedictus ... Duarte Lobo</a><br>
+                  <a class="liner-list" onclick="javascript:linerLoboScroll('#yesacred');">11: Ye sacred muses (in memoriam Thomas Tallis) ... William Byrd (c. 1540 - 1623)</a><br>
+                  <a class="liner-list" onclick="javascript:linerLoboScroll('#communio');">12: Missa pro defunctis a6 - Communio: Lux aeterna ... Duarte Lobo</a><br>
+                  <a class="liner-list" onclick="javascript:linerLoboScroll('#agnus');">13: Missa pro defunctis a6 - Agnus Dei ... Duarte Lobo</a><br>
+                  <a class="liner-list" onclick="javascript:linerLoboScroll('#death');">14: Death hath deprived me (A remembrance of Thomas Morley) ... Thomas Weelkes (1576 - 1623)</a><br>
+                  <a class="liner-list" onclick="javascript:linerLoboScroll('memento');">15: Missa pro defunctis a6 - Responsory: Memento mei ... Duarte Lobo</a><br>
+									</div><br><br>
+                    
+                 <h3 id="introitus">1: Missa pro defunctis a6 - Introitus: Requiem aeternam ... Duarte Lobo (c. 1565-1646)</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+                    <div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Requiem aeternam dona eis, Domine.<br>
+                            Et lux perpetua luceat eis.<br>
+                            Te decet hymnus, Deus, in Sion,<br>
+                            Et tibi reddetur votum in Jerusalem<br>
+                            Exaudi orationem meam<br>
+                            Ad te omnis caro veniet.
+
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Eternal rest give unto them, O Lord<br>
+                            And let perpetual light shine upon them<br>
+                            A hymn, O God, becometh Thee in Zion<br>
+                            And a vow shall be paid to thee in Jerusalem<br>
+                            Hear my prayer<br>
+                            All flesh shall come before you.
+
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="kyrie">2: Missa pro defunctis a6 - Kyrie ... Duarte Lobo</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Kyrie eleison.<br>
+                            Christe eleison.<br>
+                            Kyrie eleison.
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Lord, have mercy.<br>
+                            Christ, have mercy.<br>
+                            Lord, have mercy.
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="mort">3: Mort, tu a navr&eacute; de ton dart (in memoriam Gilles Binchois) ... Johannes Ockeghem (1410/25 - 1497)</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="english-only">
+                          <div class="translation-border">
+                            Translation forthcoming
+                          </div>
+                        </div>
+                        <!--
+                        <div class="english">
+                          <div class="translation-border">
+                            Mort in English
+                          </div>
+                        </div>
+                      -->
+                      </div>
+                <br><br>
+                <h3 id="graduale">4: Missa pro defunctis a6 - Graduale: Requiem aeternam ... Duarte Lobo</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Requiem aeternam dona eis, Domine,<br>
+                            et lux perpetua luceat eis.<br>
+                            <i>Verse:</i> In memoria aeterna erit iustus:<br>
+                            ab auditione mala non timebit.
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Give them eternal rest, O Lord,<br>
+                            and let perpetual light shine on them.<br>
+                            The just man shall be remembered everlastingly,<br>
+                            he will not fear an evil hearing.
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="nymphes">5: Nymphes des bois (La D&eacute;ploration de Johannes Ockeghem) ... Josquin des Prez (1450/55 - 1521)</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Nymphes des bois, d&eacute;esses des fontaines,<br>
+                            Chantres expres de toutes nations,<br>
+                            Changes voz voix fors cleres et hautaines<br>
+                            En cris tranchantz et lamentations,<br>
+                            Car d’Atropoz les molestations<br>
+                            Votr’Ockeghem par sa rigueur atrappe,<br>
+                            Le vray tresor de musicque’et chef d’oeuvre,<br>
+                            Qui d’Atropoz desormais plus neschappe,<br>
+                            Dont Grant doumaig’est que la terre le recouvre.<br>
+                            Acoutrez vous d’abitz de dueil,<br>
+                            Josquin, Brumel, Pirchon, Compere,<br>
+                            Et plorez grosses larmes d’oeil,<br>
+                            Perdu avez votre bon pere.<br>
+                            Requiescat in pace. Amen.
+
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Wood-nymphs, goddesses of the fountains,<br>
+                            Skilled singers of every nation,<br>
+                            Turn your voices, so clear and lofty,<br>
+                            To piercing cries and lamentation<br>
+                            Because Atropos’ interference<br>
+                            Has caught your Ockeghem in her trap,<br>
+                            The true treasurer of music and master,<br>
+                            Who no longer escapes Atropos.<br>
+                            It is great sorrow that the earth must cover him.<br>
+                            Put on the clothes of mourning,<br>
+                            Josquin, Brumel, Pierre de la Rue, Comp&egrave;re,<br>
+                            And weep great tears from your eyes,<br>
+                            For you have lost your good father.<br>
+                            May he rest in peace. Amen.
+
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="sequentia">6: Missa pro defunctis a6 - Sequentia: Dies irae ... Duarte Lobo</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            1. Dies irae, dies illa<br>
+                            solvet saeclum in favilla,<br>
+                            teste David cum Sibylla.<br><br>
+
+                            2. Quantus tremor est futurus,<br>
+                            quando iudex est venturus,<br>
+                            cuncta stricte discussurus?<br><br>
+
+                            3. Tuba mirum spargens sonum,<br>
+                            per sepulchra regionum,<br>
+                            coget omnes ante thronum.<br><br>
+
+                            4. Mors stupebit et natura,<br>
+                            cum resurget creatura,<br>
+                            iudicanti responsura.<br><br>
+
+                            5. Liber scriptus proferetur<br>
+                            in quo totum continetur,<br>
+                            unde mundus iudicetur.<br><br>
+
+                            6. Iudex ergo cum sedebit,<br>
+                            quidquid latet, apparebit;<br>
+                            nil inultum remanebit.<br><br>
+
+                            7. Quid sum miser tunc dicturus?<br>
+                            Quem patronum rogaturus,<br>
+                            cum vix iustus sit securus?<br><br>
+
+                            8. Rex tremendae maiestatis,<br>
+                            qui salvandos salvas gratis,<br>
+                            salva me, fons pietatis.<br><br>
+
+                            9. Recordare, Iesu pie,<br>
+                            quod sum causa tuae viae:<br>
+                            ne me perdas illa die.<br><br>
+
+                            10. Quaerens me, sedisti lassus:<br> 
+                            redemisti crucem passus:<br>
+                            tantus labor non sit cassus.<br><br>
+
+                            11. Iuste Iudex ultionis,<br>
+                            donum fac remissionis<br>
+                            ante diem rationis.<br><br>
+
+                            12. Ingemisco tamquam reus:<br>
+                            culpa rubet vultus meus:<br>
+                            supplicanti parce, Deus.<br><br>
+
+                            13. Qui Mariam absolvisti,<br>
+                            et latronem exaudisti, <br>
+                            mihi quoque spem dedisti.<br><br>
+
+                            14. Preces meae non sunt dignae:<br>
+                            sed tu bonus fac benigne,<br>
+                            ne perenni cremer igne.<br><br>
+
+                            15. Inter oves locum praesta,<br>
+                            et ab haedis me sequestra,<br>
+                            statuens in parte dextra.<br><br>
+
+                            16. Confutatis maledictis,<br>
+                            flammis acribus addictis:<br>
+                            voca me cum benedictis.<br><br>
+
+                            17. Oro supplex et acclinis<br>
+                            cor contritum quasi cinis,<br>
+                            gere curam mei finis.<br><br>
+
+                            18. Lacrymosa dies illa<br>
+                            qua resurget ex favilla<br>
+                            iudicandus homo reus.<br><br>
+                            
+                            19. Huic ergo parce, Deus:<br>
+                            Pie Iesu Domine,<br>
+                            dona eis requiem. Amen.
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            1. A day of wrath; that day,<br>
+                            it will dissolve the world into glowing ashes,<br>
+                            as attested by David together with the Sibyl.<br><br>
+
+                            2. What trembling will there be,<br>
+                            when the Judge shall come<br>
+                            to examine everything in strict justice.<br><br>
+
+                            3. The trumpet's wondrous call sounding abroad<br>
+                            in tombs throughout the world<br>
+                            shall drive everybody forward to the throne.<br><br>
+
+                            4. Death and nature shall stand amazed<br>
+                            when creation rises again<br>
+                            to give answer to its Judge.<br><br>
+
+                            5. A written book will be brought forth<br>
+                            in which everything is contained<br>
+                            from which the world shall be judged.<br><br>
+
+                            6. So when the Judge is seated,<br>
+                            whatever is hidden will be made known:<br>
+                            nothing shall go unpunished.<br><br>
+
+                            7. What shall I, wretch, say at that time?<br>
+                            What advocate shall I entreat (to plead for me)<br>
+                            when barely are the righteous safe from damnation?<br><br>
+
+                            8. King of awesome majesty,<br>
+                            who grants salvation to those that are to be saved,<br>
+                            save me, o fount of Piety.<br><br>
+
+                            9. Remember, dear Jesus,<br>
+                            that I am the reason for Thy journey (into this world):<br>
+                            do not cast me away on that day.<br><br>
+
+                            10. Seeking me, you sat down weary,<br>
+                            You redeemed me, suffering death on the Cross:<br>
+                            let not such toil have been in vain.<br><br>
+
+                            11. Just Judge of vengeance,<br>
+                            grant me the gift of pardon<br>
+                            before the day of reckoning.<br><br>
+
+                            12. I groan like one condemned:<br>
+                            my face blushes for my sins:<br>
+                            spare a supplicant, o God.<br><br>
+
+                            13. Thou who didst absolve Mary (Magdalen),<br>
+                            and heard the robber,<br>
+                            hast given me hope as well.<br><br>
+
+                            14. My prayers are not worthy:<br>
+                            but Thou, of Thy goodness, deal generously (with me),<br>
+                            that I burn not in the everlasting flame.<br><br>
+
+                            15. Give me a place among the sheep,<br>
+                            and separate me from the goats,<br>
+                            setting me on Thy right hand.<br><br>
+
+                            16. When the accursed have been confounded<br>
+                            and sentenced to acrid flames,<br>
+                            call me along with the blessed.<br><br>
+
+                            17. I prostrate myself, supplicating,<br>
+                            my heart in ashes, repentant;<br>
+                            take good care of my last moment!<br><br>
+
+                            18. That day will be one of weeping<br>
+                            on which shall rise again from the embers<br>
+                            the guilty man, to be judged.<br><br>
+                            
+                            19. Therefore spare him, O God.<br>
+                            Merciful Lord Jesus,<br>
+                            grant them rest. Amen.
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="musae">7: Musae Jovis (in memoriam Josquin des Prez) ... Nicolas Gombert (c. 1495 - c. 1560)</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Musæ Iovis ter maximi<br>
+                            Proles canora, plangite,<br>
+                            Comas cypressus comprimat<br>
+                            Iosquinus ille ille occidit,<br>
+                            Templorum decus,<br>
+                            Et vestrum decus.<br><br>
+
+                            Severa mors et improba<br>
+                            Quæ templa dulcibus sonis<br>
+                            Privas, et aulas principum,<br>
+                            Malum tibi quod imprecer<br>
+                            Tollenti bonos,<br>
+                            Parcenti malis?<br><br>
+
+                            Apollo sed necem tibi<br>
+                            Minatur, heus mors pessima,<br>
+                            Instructus arcu et spiculis<br>
+                            Musasque ut addant commonet,<br>
+                            Et laurum comis,<br>
+                            Et aurum comis.<br><br>
+
+                            Iosquinus inquit optimo<br>
+                            Et maximo gratus Iovi,<br>
+                            Triumphat inter cœlites<br>
+                            Et dulce carmen concinit<br>
+                            Templorum decus,<br>
+                            Musarum decus.<br><br>
+                            
+                            Cantus firmus:<br>
+                            Circumdederunt me gemitus mortis,<br>
+                            doloris inferni circumdederunt me'
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Ye Muses, melodious offspring<br>
+                            of thrice-greatest Jupiter, make lamentation.<br>
+                            The cypress draws in its leaves.<br>
+                            The famous Josquin, he is dead:<br>
+                            the glory of temples,<br>
+                            and your own glory.<br><br>
+
+                            Grim and merciless Death,<br>
+                            who deprive the temples<br>
+                            and princely courts of sweet sounds,<br>
+                            what curse could I invoke upon you<br>
+                            who take away the good,<br>
+                            who spare the undeserving?<br><br>
+
+                            But Apollo, equipped with bow and arrow,<br>
+                            threatens you with destruction,<br>
+                            O you most vile Death,<br>
+                            and calls upon the Muses<br>
+                            to add both laurel<br>
+                            and gold to their hair.<br><br>
+
+                            "Josquin," he says, "pleasing<br>
+                             to the best and greatest Jupiter,<br> 
+                            exults among the heavenly beings<br>
+                            and sings a sweet song:<br>
+                            the glory of temples,<br>
+                            the glory of the Muses".<br><br>
+                            
+                            Cantus firmus:<br>
+                            The cries of death and<br>
+                            the pains of hell surround me
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="offertorium">8: Missa pro defunctis a6 - Offertorium: Domine Jesu Christe ... Duarte Lobo</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Domine, Jesu Christe, Rex gloriae,<br>
+                            libera animas omnium fidelium defunctorum<br>
+                            de poenis inferni et de profundo lacu.<br>
+                            Libera eas de ore leonis<br>
+                            ne absorbeat eas tartarus,<br>
+                            ne cadant in obscurum;<br>
+                            Sed signifer sanctus Michael<br>
+                            repraesentet eas in lucem sanctam,<br>
+                            Quam olim Abrahae promisisti et semini eius.<br>
+                            Hostias et preces tibi, Domine, laudis offerimus<br>
+                            tu suscipe pro animabus illis,<br>
+                            quarum hodie memoriam facimus.<br>
+                            Fac eas, Domine, de morte transire ad vitam.<br>
+                            Quam olim Abrahae promisisti et semini eius.
+
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Lord Jesus Christ, king of glory,<br>
+                            deliver the souls of all the faithful departed<br>
+                            from the pains of Hell and the bottomless pit.<br>
+                            Deliver them from the jaws of the lion,<br>
+                            lest hell engulf them,<br>
+                            lest they be plunged into darkness;<br>
+                            but let the holy standard-bearer Michael<br>
+                            lead them into the holy light,<br>
+                            as once you promised to Abraham and to his seed.<br>
+                            Lord, in praise we offer you sacrifices and prayers,<br>
+                            accept them on behalf of those<br>
+                            who we remember this day:<br>
+                            Lord, make them pass from death to life,<br>
+                            as once you promised to Abraham and to his seed.
+
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="continuo">9: Continuo lacrimas (in memoriam Jacobus Clemens non Papa) ... Jacobus Vaet (c. 1529 - 1623)</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Continuo lacrimas cantores, fundite fluxu,<br>
+                            nam periit vestri lausque decusque chori.<br>
+                            Est nimis inclemens vis ac violentia fati,<br>
+                            Quae tam clementi parcere dura negat.<br>
+                            Clementem tamen omnipotens Deus ipse juvabit<br>
+                            Ut mortem vincat, qui nece victus erat.<br>
+
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Pour out in a constant flow your tears, ye singers<br>
+                            for the praise and glory of your choir has departed.<br>
+                            All too inclement is the violence of Fate<br>
+                            refusing to spare so clement a one harsh blows.<br>
+                            But all-powerful God Himself will help Clement<br>
+                            to conquer death, whom death has laid low.
+
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                 <h3 id="sanctus">10: Missa pro defunctis a6 - Sanctus & Benedictus ... Duarte Lobo</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Sanctus, Sanctus, Sanctus,<br>
+                            Dominus Deus Sabaoth.<br>
+                            Pleni sunt coeli et terra gloria tua.<br>
+                            Osanna in excelsis.<br><br>
+
+                            Benedictus qui venit<br>
+                            in nomine Domini.<br>
+                            Osanna in excelsis.
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Holy, holy, holy<br>
+                            Lord God of Hosts.<br>
+                            Heaven and earth are full of your glory.<br>
+                            Hosanna in the highest.<br><br>
+
+                            Blessed is he who comes<br>
+                            in the name of the Lord.<br>
+                            Hosanna in the highest.
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="yesacred">11: Ye sacred muses (in memoriam Thomas Tallis) ... William Byrd (c. 1540 - 1623)</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="english-only">
+                          <div class="translation-border">
+                            Ye sacred Muses, race of Jove,<br>
+                            whom Music's lore delighteth,<br>
+                            Come down from crystal heav'ns above<br>
+                            to earth where sorrow dwelleth,<br>
+                            In mourning weeds, with tears in eyes:<br>
+                            Tallis is dead, and Music dies.
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="communio">12: Missa pro defunctis a6 - Communio: Lux aeterna ... Duarte Lobo</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Lux aeterna luceat eis, Domine,<br>
+                            cum sanctis tuis in aeternum, quia pius es.<br>
+                            Requiem aeternam dona eis Domine,<br>
+                            et lux perpetua luceat eis,<br>
+                            quia pius es.
+
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Let everlasting light shine upon them, Lord,<br>
+                            with Thy saints forever, for Thou art merciful.<br>
+                            Grant them eternal rest, Lord,<br>
+                            and let perpetual light shine upon them,<br>
+                            for Thou art merciful.
+
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="agnus">13: Missa pro defunctis a6 - Agnus Dei ... Duarte Lobo</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Agnus Dei, qui tollis peccata mundi,<br>
+                            dona eis requiem.<br>
+                            Agnus Dei, qui tollis peccata mundi,<br>
+                            dona eis requiem sempiternam.
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            Lamb of God, who takes away the sins of the world,<br>
+                            grant them rest.<br>
+                            Lamb of God, who takes away the sins of the world,<br>
+                            grant them everlasting rest.
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="death">14: Death hath deprived me (A remembrance of Thomas Morley) ... Thomas Weelkes (1576 - 1623)</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="english-only">
+                          <div class="translation-border">
+                            Death hath deprived me of my dearest friend,<br>
+                            My dearest friend is dead and laid in grave,<br>
+                            In grave he rests until the world shall end<br>
+                            As end must all things have.<br>
+                            All things must have an end that Nature wrought,<br>
+                            Must unto dust be brought.
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                <h3 id="memento">15: Missa pro defunctis a6 - Responsory: Memento mei ... Duarte Lobo</h3>
+								<span class="backtotop" onclick="javascript:linerLoboScrollToTop();">Back to Table of Contents</span>
+								<span class="backtoorder" onclick="javascript:$('#buy-cd-button').trigger('click');">Back to the CD Order Form</span><br><br>
+								<div class="translation-wrapper">
+                        <div class="foreign">
+                          <div class="translation-border">
+                            Memento mei Deus,<br>
+                            quia ventus est vita mea:<br>
+                            Nec aspiciat me visus hominis.<br>
+                            De profundis clamavi ad te Domine:<br>
+                            Domine exaudi vocem meam.<br>
+                            Nec aspiciat me visus hominis.<br><br>
+                            Kyrie eleison<br>
+                            Christe eleison<br>
+                            Kyrie eleison<br><br>
+                            Requiescat in pace. Amen.
+                          </div>
+                        </div>
+                        <div class="english">
+                          <div class="translation-border">
+                            O God be mindful of me,<br>
+                            for that my life is but wind,<br>
+                            nor the sight of man may behold me.<br>
+                            From the depths I did cry to thee O Lord,<br>
+                            O Lord hear my voice.<br>
+                            Nor the sight of man may behold me.<br><br>
+                            Lord, have mercy.<br>
+                            Christ, have mercy.<br>
+                            Lord, have mercy.<br><br>
+                            May he rest in peace. Amen.
+                          </div>
+                        </div>
+                      </div>
+                <br><br>
+                
+                  </div>
+              </div>
+						<button class="cd-accordion" id="buy-cd-button">Order our CDs</button>
+							<div class="panel" id="buy-cd-panel">
+								<center>
+                    <p class="cd-order-form-title">
+                    We are proud to announce our newest CD!<br>
+                    In Memoriam: Commemoration Motets of the Renaissance
+                    </p>
+                    <img class="cdheader" src="img/LoboCDcover.png">
+                </center>
+                <div class="liner-table-of-contents-lobo" style="margin-left:auto; margin-right:auto; width:90%; max-width:800px;">
+                  <h3>
+                    Track listing
+                  </h3><br>
+                  <span class="liner-list-no-click">1: Missa pro defunctis a6 - Introitus: Requiem aeternam ... Duarte Lobo (c. 1565-1646)</span><br>
+									<span class="liner-list-no-click">2: Missa pro defunctis a6 - Kyrie ... Duarte Lobo</span><br>
+									<span class="liner-list-no-click">3: Mort, tu a navr&eacute; de ton dart (in memoriam Gilles Binchois) ... Johannes Ockeghem (1410/25 - 1497)</span><br>
+									<span class="liner-list-no-click">4: Missa pro defunctis a6 - Graduale: Requiem aeternam ... Duarte Lobo</span><br>
+									<span class="liner-list-no-click">5: Nymphes des bois (La D&eacute;ploration de Johannes Ockeghem) ... Josquin des Prez (1450/55 - 1521)</span><br>
+									<span class="liner-list-no-click">6: Missa pro defunctis a6 - Sequentia: Dies irae ... Duarte Lobo</span><br>
+									<span class="liner-list-no-click">7: Musae Jovis (in memoriam Josquin des Prez) ... Nicolas Gombert (c. 1495 - c. 1560)</span><br>
+									<span class="liner-list-no-click">8: Missa pro defunctis a6 - Offertorium: Domine Jesu Christe ... Duarte Lobo</span><br>
+									<span class="liner-list-no-click">9: Continuo lacrimas (in memoriam Jacobus Clemens non Papa) ... Jacobus Vaet (c. 1529 - 1623)</span><br>
+                  <span class="liner-list-no-click">10: Missa pro defunctis a6 - Sanctus & Benedictus ... Duarte Lobo</span><br>
+                  <span class="liner-list-no-click">11: Ye sacred muses (in memoriam Thomas Tallis) ... William Byrd (c. 1540 - 1623)</span><br>
+                  <span class="liner-list-no-click">12: Missa pro defunctis a6 - Communio: Lux aeterna ... Duarte Lobo</span><br>
+                  <span class="liner-list-no-click">13: Missa pro defunctis a6 - Agnus Dei ... Duarte Lobo</span><br>
+                  <span class="liner-list-no-click">14: Death hath deprived me (A remembrance of Thomas Morley) ... Thomas Weelkes (1576 - 1623)</span><br>
+                  <span class="liner-list-no-click">15: Missa pro defunctis a6 - Responsory: Memento mei ... Duarte Lobo</span><br>
+                </div>
+                <p class="cd-order-form">
+                  You can order this CD via our website, to be delivered to you in the post, using the form at the bottom of this page.</p>
+                <p class="cd-order-form">At present it is not yet available to purchase as an online digital download. Please check back here for download links in the near future. We'll be using social media to announce when this is ready, so please find us on Twitter and Facebook using the <a style="cursor:pointer;" onclick="javascript:$('#contact_tab').trigger('click');">Contact</a> tab.
+                </p>
+                <hr>
+                  <center>
+                  <p class="cd-order-form-title">
+										The Lacock Scholars' debut CD:<br>'Music by Tallis, Lassus, Monteverdi, and others'
+										</p>
+										<img class="cdheader" src='img/2016CDCover.jpg'>
+								</center>
+								<div class="liner-table-of-contents" style="margin-left:auto; margin-right:auto; width:90%; max-width:600px;">
+									<h3>Track listing</h3><br>
+									<span class="liner-list-no-click">1: Verbum caro factum est - John Sheppard (c. 1515 - 1558)</span><br>
+									<span class="liner-list-no-click">2: Nesciens mater - Jean Mouton (c. 1455 - 1522)</span><br>
+									<span class="liner-list-no-click">3: Nunc dimittis - Josquin des Prez (c. 1450-55 - 1521)</span><br>
+									<span class="liner-list-no-click">4: Noel, adieu thou court's delight - Thomas Weelkes (1576 - 1623)</span><br>
+									<span class="liner-list-no-click">5: O salutaris hostia a6 - William Byrd (c. 1540 - 1623)</span><br>
+									<span class="liner-list-no-click">6: Ch'io t'ami e t'ami pi&ugrave; de la mia vita - Claudio Monteverdi (1567 - 1643)</span><br>
+									<span class="liner-list-no-click">7: Missa pro defunctis a6: Introitus & Kyrie - Duarte Lobo (c. 1564-9 - 1646)</span><br>
+									<span class="liner-list-no-click">8: Musica dei donum - Orlande de Lassus (c. 1530-32 - 1594)</span><br>
+									<span class="liner-list-no-click">9: Suscipe quaeso - Thomas Tallis (c. 1505 - 1585)</span><br>										
+									</div>
+								<p class="cd-order-form">									
+									Our first CD is a selection of music drawn from our regular performing repertoire, presented in our series of concerts at St Cuthbert's Earl's Court. You can read some detailed information about the music on the CD and our experience of recording it by clicking on Notes buttons above.
+								</p>
+								<p class="cd-order-form">
+								The album is available for digital download through the following online music stores. If you like, you can also stream individual tracks on Spotify before purchasing:
+								</p>
+								<div class="digital-stores-wrapper">
+									<div class="amazon-badge">
+										<center>
+									<a target="_blank" href="http://amzn.eu/dK9lzwu"><img style="height:50px;" src="img/amazonMusic.png"/></a>
+										</center>
+									</div>
+									<div class="google-play-badge">
+										<center>
+										<a target="_blank" href='https://play.google.com/store/music/album/The_Lacock_Scholars_Music_by_Tallis_Lassus_Monteve?id=Bwen4b2umxpy5tdaxejetdg6ggi&hl=en'><img alt='Listen on Google Play Music' style='height:50px;' src='https://play.google.com/intl/en_us/badges-music/images/badges/en_badge_web_music.png'/></a>
+										</center>
+									</div>
+									<div class="spotify-badge">
+										<center>
+									<a target="_blank" href="https://open.spotify.com/album/7ca2CNJ8Pbj8uzlGgJXeTi"><img style="height:50px;" src="img/spotify-badge.png"></a>
+										</center>
+									</div>
+								</div>
+								<p class="cd-order-form">
+									We apologise to iPhone and other iTunes users, but the album is not available through iTunes. We are working on getting the album into Apple's online store.
+								</p>
+								<hr>
+                <p class="cd-order-form">
+									You can also order the CD direct from us through the online form below. We will then arrange for your order to be posted to you.
+								</p>
+                
+								<p class="cd-order-form" style="padding-left:10%;">
+									<center>
+									<b>Prices for both CDs are as follows:</b>
+									</center>
+								</p>
+									<div style="width:95%; max-width:600px; margin-left:auto; margin-right:auto; margin-top:10px;">
+										<span class="price-list">UK: £11</span>
+										<span class="price-list">EU: €15</span>
+										<span class="price-list">USA or elsewhere: $15 USD</span>
+									</div>																
+								<p class="cd-order-form">
+								Note that this is an order request form and does not enable you to pay online. We can accept a bank transfer or payment by cheque. Once you have filled in the form, you will receive an email confirming your order with instructions on how to pay us, based on the information you provide. Once we have received your payment, we'll post you the CD to the address you specify on the form.
+								</p>
+								<p class="cd-order-form">
+								Those not resident in Europe may want to use <a href="http://www.transferwise.com" target="_blank">TransferWise</a> or an equivalent cheap and simple method of setting up a bank transfer and avoiding expensive bank charges.
+								</p>
+								<p class="cd-order-form">
+									We can process orders of up to five CDs through this online form. Please get in touch with us on <a href="mailto:info@lacockscholars.org">info@lacockscholars.org</a> if you'd like to order more or if you'd like to discuss an different method of payment.
+								</p>
+									<div id="form-itself" style="width:99%; max-width:850px; margin-left:auto; margin-right:auto;">
+									<script type="text/javascript" src="https://form.jotformeu.com/jsform/63182690189363"></script>
+									</div>
+							</div>
+						
+						</div>
+						
+					</div>
+					
+				</li>
+
+				<li data-content="contact" class="section">
+
+					<div class="cont-wrapper" id="contact-content">
+
+						<div id="email">
+							<center>
+								Please get in touch with us by email on <a href="mailto:info@lacockscholars.org">info@lacockscholars.org</a>
+							</center>
+						</div>
+
+						<div id="social-wrapper">
+							<center>
+								Interact with us on social media
+								<table width="60%" style="margin-top:20px; min-width:200px; max-width:400px;">
+									<tr>
+										<td width="33%">
+											<center>
+												<a target="_blank" title="follow me on Twitter" href="http://www.twitter.com/LacockScholars"><img alt="follow me on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border=0></a>
+											</center>
+										</td>
+										<td width="33%">
+											<center>
+												<a target="_blank" title="follow me on facebook" href="http://www.facebook.com/TheLacockScholars"><img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a>
+											</center>
+										</td>
+										<td width="33%">
+											<center>
+												<a target="_blank" title="follow me on youtube" href="https://www.youtube.com/results?search_query=lacock+scholars"><img alt="follow me on youtube" src="https://c866088.ssl.cf3.rackcdn.com/assets/youtube30x30.png" border=0></a>
+											</center>
+										</td>
+									</tr>
+								</table>
+								<br>Or sign up to our email newsletter<br><br>
+							</center>
+              
+              <b>Opt in to email communications</b><br><br>
+The Lacock Scholars will use the information you provide on this form to send you emails about our music and concerts. You can change your mind at any time by clicking the unsubscribe link in the footer of any email you receive from us, or by contacting us at <a href="mailto:info@lacockscholars.org">info@lacockscholars.org</a>. Your data will never be passed to any third parties.<br><br>We use MailChimp as our marketing automation platform. By clicking below to submit this form, you acknowledge that the information you provide will be transferred to MailChimp for processing in accordance with their Privacy Policy and Terms.
+						</div>
+
+
+						<div id="mc_embed_signup">
+              <form action="https://lacockscholars.us12.list-manage.com/subscribe/post?u=ea6bf3a0a8877f97ae473402e&amp;id=d3d56e5c0c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <h2>Keep up to date with The Lacock Scholars</h2>
+                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                  <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+            </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                  </div>
+                  <div class="mc-field-group">
+                    <label for="mce-FNAME">First Name </label>
+                    <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                  </div>
+                  <div class="mc-field-group">
+                    <label for="mce-LNAME">Last Name </label>
+                    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                  </div>
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                  </div>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ea6bf3a0a8877f97ae473402e_d3d56e5c0c" tabindex="-1" value=""></div>
+                  <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+              </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+            <script type='text/javascript'>
+              (function($) {
+                window.fnames = new Array();
+                window.ftypes = new Array();
+                fnames[0] = 'EMAIL';
+                ftypes[0] = 'email';
+                fnames[1] = 'FNAME';
+                ftypes[1] = 'text';
+                fnames[2] = 'LNAME';
+                ftypes[2] = 'text';
+              }(jQuery));
+              var $mcj = jQuery.noConflict(true);
+            </script>
+						
+					</div>
+					
+				</li>
+
+			</ul>
+			
+		</div> <!-- CD-TABS -->
+
+		</div> <!-- BACKGROUND -->
+
+		<script src="js/soundcloud.js"></script>
+		<script src="js/jquery-2.1.1.js"></script>
+		<script src="js/jquery.modal.js"></script>
+		<script src="js/hammer.min.js"></script>
+		<script src="js/jquery.hammer.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+		<script src="js/date.js"></script>
+		<script src="js/grid.js"></script>
+		<script src="js/main.js"></script>
+	
+</body>
+
+</html>
